@@ -12,7 +12,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 * Claire Hausman de Morais
 * Andressa Vitória Miranda
-* Nome completo do aluno 3
+* Daniel Leão e Souza da Silva
 * Nome completo do aluno 4
 * Nome completo do aluno 5
 
