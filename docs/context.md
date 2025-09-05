@@ -1,12 +1,10 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+Nos últimos anos, o crescimento urbano acelerado e a desigualdade social nas grandes cidades brasileiras têm contribuído diretamente para o aumento da insegurança, especialmente nas regiões metropolitanas de Belo Horizonte (PAES-MACHADO; MINAYO, 2019). Moradores e comerciantes convivem diariamente com furtos, assaltos, tráfico de drogas e outros tipos de violência que impactam diretamente sua qualidade de vida. Esse cenário de insegurança, além de gerar medo e tensão, resulta na desvalorização imobiliária, evasão de moradores e enfraquecimento do comércio local (SOUZA; CARDOSO, 2021). Segundo um relatório publicado pelo Estado de Minas (2025), a capital mineira registrou uma média de 24 furtos diários a estabelecimentos comerciais, inclusive em bairros tradicionalmente considerados seguros, como o Belvedere — o que levou muitos comerciantes a adotarem barreiras físicas e reforçar medidas de segurança privada.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+Em resposta a esse cenário, moradores de bairros como Luxemburgo, Belvedere e Buritis vêm implementando iniciativas de segurança colaborativa, como sistemas de videomonitoramento inteligente e redes de comunicação comunitária em parceria com órgãos públicos (ESTADO DE MINAS, 2025). Na região da Savassi, por exemplo, a criação da Rede de Comerciantes Protegidos — que utiliza grupos de WhatsApp para a troca de informações entre lojistas e a Polícia Militar — contribuiu para uma redução de 40% nos índices de criminalidade em apenas um mês (CDL-BH, 2024). Esses exemplos demonstram o potencial das soluções baseadas em colaboração comunitária, uso da tecnologia e comunicação ágil para prevenir crimes e promover sensação de segurança nas áreas urbanas.
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Apesar dessas iniciativas pontuais, muitos bairros de Belo Horizonte ainda carecem de canais estruturados, eficientes e seguros para reportar ocorrências, emitir alertas ou organizar ações conjuntas entre moradores, comerciantes e autoridades. Diante disso, este projeto propõe o desenvolvimento de uma plataforma digital voltada à segurança comunitária, com foco em bairros vulneráveis à criminalidade. A ferramenta pretende centralizar a comunicação entre os moradores, facilitar o registro de incidentes, fomentar a mobilização social e fortalecer o vínculo entre a comunidade e o poder público. A proposta se justifica pela necessidade urgente de ampliar o acesso a soluções acessíveis, colaborativas e tecnológicas, capazes de transformar a segurança urbana em um esforço coletivo, sustentável e eficaz.
 
 ## Problema
 
@@ -50,5 +48,26 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
 > - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
+>
+
+##Referências
+Artigos acadêmicos:
+
+PAES-MACHADO, E.; MINAYO, M. C. S. Violência urbana e segurança pública no Brasil: desafios contemporâneos. Ciência & Saúde Coletiva, v. 24, n. 7, p. 2591-2598, 2019. Disponível em: https://www.scielo.br/j/csc/a/7hM3XTX8x3L7J9qzZzqBYVm
+. Acesso em: 04 set. 2025.
+
+SOUZA, F.; CARDOSO, H. O impacto da violência na valorização de imóveis urbanos: uma análise em Belo Horizonte. Revista de Economia Aplicada, v. 25, n. 2, p. 101-119, 2021. Disponível em: https://www.scielo.br/j/ecoa/a/yjDcP8nt9MMvcDwQvTQymqb
+. Acesso em: 04 set. 2025.
+
+Reportagens e fontes jornalísticas:
+
+ESTADO DE MINAS. Atrás das grades: como comércio e consumidores pagam o preço da insegurança. Estado de Minas, Belo Horizonte, 12 jul. 2025. Disponível em: https://www.em.com.br/gerais/2025/07/7199585-atras-das-grades-como-comercio-e-consumidores-pagam-o-preco-da-inseguranca.html
+. Acesso em: 04 set. 2025.
+
+ESTADO DE MINAS. Bairros de BH apostam em redes de vigilância tecnológica. Estado de Minas, Belo Horizonte, 18 jul. 2025. Disponível em: https://www.em.com.br/gerais/2025/07/7205891-bairros-de-bh-apostam-em-redes-de-vigilancia-tecnologica.html
+. Acesso em: 04 set. 2025.
+
+CÂMARA DE DIRIGENTES LOJISTAS DE BELO HORIZONTE (CDL-BH). Rede de Comerciantes Protegidos reduz criminalidade em 40% na região Centro-Sul de Belo Horizonte. CDL-BH, 06 abr. 2024. Disponível em: https://www.cdlbh.com.br/imprensa/rede-de-comerciantes-protegidos-reduz-criminalidade-em-40-na-regiao-centro-sul-de-belo-horizonte
+. Acesso em: 04 set. 2025.
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
