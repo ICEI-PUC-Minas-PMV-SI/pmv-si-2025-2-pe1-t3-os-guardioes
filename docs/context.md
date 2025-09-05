@@ -48,7 +48,8 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
 > - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
->
+> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 ##Referências
 Artigos acadêmicos:
@@ -69,5 +70,4 @@ ESTADO DE MINAS. Bairros de BH apostam em redes de vigilância tecnológica. Est
 
 CÂMARA DE DIRIGENTES LOJISTAS DE BELO HORIZONTE (CDL-BH). Rede de Comerciantes Protegidos reduz criminalidade em 40% na região Centro-Sul de Belo Horizonte. CDL-BH, 06 abr. 2024. Disponível em: https://www.cdlbh.com.br/imprensa/rede-de-comerciantes-protegidos-reduz-criminalidade-em-40-na-regiao-centro-sul-de-belo-horizonte
 . Acesso em: 04 set. 2025.
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
