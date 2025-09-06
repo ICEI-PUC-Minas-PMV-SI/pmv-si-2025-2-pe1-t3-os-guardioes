@@ -8,6 +8,19 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 ## Personas
 
+Érica tem 39 anos, é esteticista e mora no bairro Guarani, em Belo Horizonte.
+Conhecida pelos vizinhos por ser comunicativa e prestativa, Érica gosta de ir à praça para conversar, caminhar e cuidar da saúde. Usa bastante o WhatsApp e redes sociais para manter contato com amigos e clientes. Apesar de gostar da convivência com a comunidade, já teve o celular roubado durante um passeio com o filho, o que a deixou mais preocupada com a segurança do bairro. Seu sonho é abrir o próprio negócio, mas acredita que precisa de um ambiente mais seguro para isso. Ela procura uma solução que a ajude a se manter informada sobre o que acontece na região e que facilite o diálogo com outros moradores.
+
+Ana é autônoma, vive na periferia de Belo Horizonte e sente-se insegura ao andar sozinha pelas ruas.
+Ela se preocupa com a segurança do bairro e gostaria de se manter atualizada sobre os acontecimentos da região. Ana sente falta de apoio por parte das autoridades e muitas vezes não sabe a quem recorrer em casos de violência ou ameaças. Seu sonho é viver com mais tranquilidade, podendo circular pelo bairro sem medo. Está em busca de uma ferramenta simples e acessível, que permita receber alertas de segurança e que a conecte com os vizinhos para formar uma rede de proteção comunitária.
+
+Ana é autônoma, vive na periferia de Belo Horizonte e sente-se insegura ao andar sozinha pelas ruas.
+Ela se preocupa com a segurança do bairro e gostaria de se manter atualizada sobre os acontecimentos da região. Ana sente falta de apoio por parte das autoridades e muitas vezes não sabe a quem recorrer em casos de violência ou ameaças. Seu sonho é viver com mais tranquilidade, podendo circular pelo bairro sem medo. Está em busca de uma ferramenta simples e acessível, que permita receber alertas de segurança e que a conecte com os vizinhos para formar uma rede de proteção comunitária.
+
+João é dono de uma pizzaria e tem enfrentado dificuldades para manter seu negócio funcionando à noite.
+Já foi vítima de tentativa de roubo durante entregas e percebe que muitos clientes evitam sair de casa após determinado horário por medo da criminalidade. João quer garantir a segurança dos entregadores e dos consumidores, e acredita que a união entre comerciantes pode ajudar a combater a violência local. Seu sonho é abrir uma segunda unidade da pizzaria, mas ele sabe que precisa de um ambiente mais seguro para expandir. Ele procura uma solução prática, que conecte os lojistas e ofereça um canal de alerta rápido e confiável.
+
+----------------------------------------------------------------------------------------------------
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
@@ -28,8 +41,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
+|Morador | Registrar uma aividade suspeita           | Para ajudar a proteger meu bairro             |
+|Comerciante | Registrar situações de risco          | Para ajudar a proteger os negócios e meus clientes            |
+|Policial       | Gerar mapa de calor do bairro                 | Intensificar o patrulhamento |
 |Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Moderador       | Investigar possíveis denúncias falsas            | Aumentar confiabilidade da ferramenta |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
