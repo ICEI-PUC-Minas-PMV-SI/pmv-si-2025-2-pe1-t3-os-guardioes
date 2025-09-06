@@ -17,29 +17,51 @@ Apesar das iniciativas pontuais de segurança colaborativa em alguns bairros de 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+### Objetivo Geral:
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Desenvolver uma plataforma digital colaborativa voltada à segurança comunitária em bairros de Belo Horizonte, visando facilitar a comunicação entre moradores, comerciantes e autoridades, além de fortalecer ações coletivas de prevenção ao crime.
+
+### Objetivos Específicos:
+
+> - Identificar as principais necessidades e desafios enfrentados por moradores de bairros com altos índices de criminalidade, por meio de entrevistas e questionários.
+
+> - Projetar e implementar funcionalidades que possibilitem o registro de ocorrências, envio de alertas em tempo real e organização de grupos comunitários de segurança.
+
+> - Estimular o engajamento dos usuários e a integração com órgãos públicos de segurança, promovendo um ambiente digital participativo e eficaz.
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A escolha deste tema se justifica pela urgência em enfrentar a crescente sensação de insegurança urbana vivida por milhares de moradores de Belo Horizonte. Segundo dados da Secretaria de Estado de Justiça e Segurança Pública de Minas Gerais (SEJUSP, 2024), os registros de furtos e assaltos aumentaram em 18% na capital mineira no último ano. Em bairros com menor infraestrutura e poder de mobilização, a vulnerabilidade é ainda maior devido à falta de canais práticos e eficientes de comunicação com as autoridades e entre os próprios moradores.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+Ao investir em uma solução digital, o projeto pretende democratizar o acesso à informação e à proteção comunitária, ampliando os impactos positivos observados em bairros onde medidas semelhantes já foram implementadas. Além disso, a plataforma busca fortalecer o senso de pertencimento e colaboração entre os moradores, elementos fundamentais para transformar a segurança pública em um esforço coletivo.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A investigação inclui entrevistas qualitativas com moradores do bairro Guarani, que revelaram preocupações recorrentes com furtos, tráfico e a falta de policiamento. Esses dados reforçam a necessidade de ferramentas tecnológicas acessíveis e adaptadas à realidade das comunidades.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público-alvo da aplicação será composto por moradores, comerciantes e policiais de bairros com alto índice de criminalidade, especialmente nas regiões periféricas e de média vulnerabilidade de Belo Horizonte, como o Guarani. Esse grupo é caracterizado por:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+> - Diversidade de faixa etária, incluindo jovens, adultos e idosos;
+
+> - Conhecimentos tecnológicos variados: desde pessoas com maior familiaridade com aplicativos até usuários com pouca experiência digital;
+
+> - Forte vínculo comunitário, com redes informais de vizinhança já existentes;
+
+> - Interesse em participar de soluções que melhorem a segurança, mesmo que de forma simples e prática.
+
+> - Além disso, serão considerados stakeholders secundários como:
+
+> - Autoridades de segurança pública (Polícia Militar, Guarda Municipal);
+
+> - Associações de moradores;
+
+> - Representantes do comércio local.
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
