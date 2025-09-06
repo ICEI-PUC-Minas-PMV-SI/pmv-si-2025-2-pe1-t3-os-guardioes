@@ -23,11 +23,11 @@ Desenvolver uma plataforma digital colaborativa voltada à segurança comunitár
 
 ### Objetivos Específicos:
 
-> - Identificar as principais necessidades e desafios enfrentados por moradores de bairros com altos índices de criminalidade, por meio de entrevistas e questionários.
+- Identificar as principais necessidades e desafios enfrentados por moradores de bairros com altos índices de criminalidade, por meio de entrevistas e questionários.
 
-> - Projetar e implementar funcionalidades que possibilitem o registro de ocorrências, envio de alertas em tempo real e organização de grupos comunitários de segurança.
+- Projetar e implementar funcionalidades que possibilitem o registro de ocorrências, envio de alertas em tempo real e organização de grupos comunitários de segurança.
 
-> - Estimular o engajamento dos usuários e a integração com órgãos públicos de segurança, promovendo um ambiente digital participativo e eficaz.
+- Estimular o engajamento dos usuários e a integração com órgãos públicos de segurança, promovendo um ambiente digital participativo e eficaz.
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
@@ -47,21 +47,21 @@ A investigação inclui entrevistas qualitativas com moradores do bairro Guarani
 
 O público-alvo da aplicação será composto por moradores, comerciantes e policiais de bairros com alto índice de criminalidade, especialmente nas regiões periféricas e de média vulnerabilidade de Belo Horizonte, como o Guarani. Esse grupo é caracterizado por:
 
-> - Diversidade de faixa etária, incluindo jovens, adultos e idosos;
+- Diversidade de faixa etária, incluindo jovens, adultos e idosos;
 
-> - Conhecimentos tecnológicos variados: desde pessoas com maior familiaridade com aplicativos até usuários com pouca experiência digital;
+- Conhecimentos tecnológicos variados: desde pessoas com maior familiaridade com aplicativos até usuários com pouca experiência digital;
 
-> - Forte vínculo comunitário, com redes informais de vizinhança já existentes;
+- Forte vínculo comunitário, com redes informais de vizinhança já existentes;
 
-> - Interesse em participar de soluções que melhorem a segurança, mesmo que de forma simples e prática.
+- Interesse em participar de soluções que melhorem a segurança, mesmo que de forma simples e prática.
 
-> - Além disso, serão considerados stakeholders secundários como:
+- Além disso, serão considerados stakeholders secundários como:
 
-> - Autoridades de segurança pública (Polícia Militar, Guarda Municipal);
+- Autoridades de segurança pública (Polícia Militar, Guarda Municipal);
 
-> - Associações de moradores;
+- Associações de moradores;
 
-> - Representantes do comércio local.
+- Representantes do comércio local.
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
