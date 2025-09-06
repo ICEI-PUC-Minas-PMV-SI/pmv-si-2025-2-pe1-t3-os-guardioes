@@ -1,8 +1,18 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Esta seção tem como objetivo detalhar as especificações gerais do projeto de uma plataforma digital voltada à segurança comunitária em bairros de Belo Horizonte com alta vulnerabilidade à criminalidade.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+Para isso, utilizamos as seguintes técnicas e ferramentas:
+
+- Mapa de Personas: representação de usuários típicos com base em entrevistas, dados e comportamento esperado.
+
+- Histórias de Usuário: definição dos desejos, necessidades e funcionalidades esperadas da plataforma, a partir da perspectiva das personas.
+
+- Requisitos Funcionais e Não Funcionais: definição técnica do escopo do sistema.
+
+- Levantamento de Restrições: identificação de limitações impostas ao projeto.
+
+- Planejamento estratégico: atraves do miro.
 
 Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
 
