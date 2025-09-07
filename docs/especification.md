@@ -50,9 +50,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Morador | Registrar uma aividade suspeita           | Para ajudar a proteger meu bairro             |
+|Morador | Registrar uma atividade suspeita           | Para ajudar a proteger meu bairro             |
 |Comerciante | Registrar situações de risco          | Para ajudar a proteger os negócios e meus clientes            |
 |Policial       | Gerar mapa de calor do bairro                 | Intensificar o patrulhamento |
+|Empresa de Vigilância | Criar estratégias comerciais  | Vender soluções personalizadas |
 |Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
 |Moderador       | Investigar possíveis denúncias falsas            | Aumentar confiabilidade da ferramenta |
 
