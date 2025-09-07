@@ -19,18 +19,24 @@ Apesar das iniciativas pontuais de segurança colaborativa em alguns bairros de 
 
 ### Objetivo Geral:
 
-Desenvolver uma plataforma digital colaborativa voltada à segurança comunitária em bairros de Belo Horizonte, visando facilitar a comunicação entre moradores, comerciantes e autoridades, além de fortalecer ações coletivas de prevenção ao crime.
+Desenvolver uma plataforma digital colaborativa voltada à segurança comunitária, que facilite a comunicação entre moradores, comerciantes e autoridades, promovendo a prevenção de crimes e o fortalecimento do senso de coletividade nos bairros de Belo Horizonte.
 
 ### Objetivos Específicos:
 
-- Identificar as principais necessidades e desafios enfrentados por moradores de bairros com altos índices de criminalidade, por meio de entrevistas e questionários.
+- Centralizar informações sobre ocorrências e alertas de segurança em um único ambiente digital de fácil acesso.
 
-- Projetar e implementar funcionalidades que possibilitem o registro de ocorrências, envio de alertas em tempo real e organização de grupos comunitários de segurança.
+- Permitir o registro rápido de incidentes, como furtos, assaltos e situações suspeitas, com geolocalização.
 
-- Estimular o engajamento dos usuários e a integração com órgãos públicos de segurança, promovendo um ambiente digital participativo e eficaz.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+- Disponibilizar canais de comunicação comunitária, estimulando a interação entre moradores e comerciantes para ações preventivas.
+
+- Criar um sistema de alertas em tempo real, que notifique os usuários sobre riscos ou movimentações suspeitas no bairro.
+
+- Fomentar a colaboração com órgãos de segurança pública, permitindo que relatórios e dados sejam compartilhados com a Polícia Militar ou Guarda Municipal.
+
+- Promover a mobilização social, incentivando a formação de redes de vizinhança protegida e campanhas educativas.
+
+- Contribuir para a sensação de segurança e valorização do bairro, fortalecendo o comércio local e a permanência dos moradores.
+
 
 ## Justificativa
 
