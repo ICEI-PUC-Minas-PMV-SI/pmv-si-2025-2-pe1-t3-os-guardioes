@@ -72,18 +72,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | 
-|------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+|ID    | Descrição do Requisito                                                                                          | Prioridade | 
+|------|-----------------------------------------------------------------------------------------------------------------|------------| 
+|RF-001| A aplicação deve permitir o cadastro de usuários (moradores, comerciantes e autoridades).                       | ALTA  |  
+|RF-002| A aplicação deve permitir login com autenticação segura (e-mail/senha ou número de celular).                    | ALTA  | 
+|RF-003| A aplicação deve permitir o registro de ocorrências com descrição, data, hora e localização.                    | ALTA  | 
+|RF-004| A aplicação deve permitir a onsulta de ocorrências registradas em mapa ou lista filtrada por data/bairro.       | MÉDIA | 
+|RF-005| A aplicação deve permitir o recebimento de notificações push no celular ou e-mail.                              | MÉDIA | 
+|RF-006| A aplicação deve permitir o gerenciamento de usuário e das denúncias feitas no sistema.                         | ALTA  | 
+|RF-007| A aplicação deve permitir o agendamento de reuniões comunitárias (mutirões, encontros com polícia, palestras).  | ALTA  | 
+|RF-008| A aplicação deve permitir o feedback comunitário para avaliar a confiabilidade das informações postadas.        | ALTA  | 
 
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|ID     | Descrição do Requisito                                                                             |Prioridade |
+|-------|----------------------------------------------------------------------------------------------------|-----------|
+|RNF-001| A aplicação deve ser responsiva, adaptando-se a dispositivos móveis e desktop.                     | MÉDIA  | 
+|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3 segundos.                         |  BAIXA | 
+|RNF-002| O sistema deve ter disponibilidade mínima de 95%, exceto em manutenções programadas.               |  MÉDIA | 
+|RNF-002| A aplicação deve garantir a segurança de dados utilizando criptografia (HTTPS, hash de senha).     |  ALTA  | 
+|RNF-002| O sistema deve ser intuitivo e de fácil uso, mesmo para usuários sem experiência tecnológica.      |  MÉDIA | 
+|RNF-002| O sistema deve ser compatível com navegadores modernos (Chrome, Edge, Firefox).                    |  MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
