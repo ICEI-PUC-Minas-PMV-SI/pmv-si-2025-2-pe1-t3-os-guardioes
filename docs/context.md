@@ -75,7 +75,7 @@ O público-alvo da aplicação será composto por moradores, comerciantes e poli
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
-##Referências
+## Referências
 Artigos acadêmicos:
 
 PAES-MACHADO, E.; MINAYO, M. C. S. Violência urbana e segurança pública no Brasil: desafios contemporâneos. Ciência & Saúde Coletiva, v. 24, n. 7, p. 2591-2598, 2019. Disponível em: https://www.scielo.br/j/csc/a/7hM3XTX8x3L7J9qzZzqBYVm
