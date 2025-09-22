@@ -41,6 +41,8 @@ A fonte principal utilizada no projeto é Poppins, por ser uma tipografia modern
 ## Iconografia
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  ![Mapa](https://github.com/user-attachments/assets/8b01a910-5333-4b88-a5da-6a9a9c8dc015)
+
   <img src="img/icons/Blue guardians logo.svg" alt="Login" width="60" height="auto"/>
   <img src="img/icons/Filter.svg" alt="Filtro" width="30" height="auto"/>
   <img src="img/icons/icon.svg" alt="Feedbacks" width="20" height="auto"/>
