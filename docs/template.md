@@ -6,31 +6,67 @@ Explique as guias de estilo utilizadas no seu projeto.
 
 ## Design
 
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
+O layout é responsivo e projetado com foco em clareza, acessibilidade e navegação simplificada. As principais áreas são:
+- **Cabeçalho fixo:** com fundo Roxo Primário (#370A54).
+- **Rodapé padrão:** com logo e redes sociais.
+- **Área de conteúdo central:** com cartões e modais bem definidos, com bordas arredondadas e fundo claro (#F3F8F8) para destaque das informações.
 
 
 ## Cores
-
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
-
+A paleta é inspirada nos tons oceânicos, com foco em contraste acessível e coerência ambiental:
+- **Roxo Primário (#370A54):** cabeçalhos, textos principais.
+- **Roxo Secundário (#874FAD):** botões ativos, textos e destaques.
+- **Roxo Terciário (#9781A6):** links e interações.
+- **Texto Claro (#7A4D98):** detalhes e descrições.
+- **Texto Escuro (#090909):** textos principais.
+- **Branco (#FFFFFF):** cartões e formulários.
+- **Botão Desativado (#B2B2B2):** estados inativos.
 
 ## Tipografia
+A fonte principal utilizada no projeto é Poppins, por ser uma tipografia moderna, legível e versátil.
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+| Função                 | Fonte     | Peso     | Tamanho aproximado |
+| ---------------------- | --------- | ---------| ------------------ |
+| Título da página       | Open-Sans | Bold     | 20–24px            |
+| Títulos de seção       | Open-Sans | SemiBold | 18–20px            |
+| Rótulos de componentes | Open-Sans | Medium   | 14–16px            |
+| Corpo do texto         | Open-Sans | Regular  | 14–16px    
 
+### Padronização de Botões
+- **Primários:** fundo Azul Primário, texto branco, cantos arredondados.
+- **Secundários:** fundo Azul Secundário ou tom neutro (#9B99A4).
+- **Desativados:** cor #B2B2B2, texto branco.
+- **Padding:** entre 0.4rem e 1rem.
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="img/icons/Blue guardians logo.svg" alt="Login" width="60" height="auto"/>
+  <img src="img/icons/Filter.svg" alt="Filtro" width="30" height="auto"/>
+  <img src="img/icons/icon.svg" alt="Feedbacks" width="20" height="auto"/>
+  <img src="img/icons/icone de busca.svg" alt="Eventos" width="30" height="auto"/>
+  <img src="img/icons/leading-icon.svg" alt="Eventos" width="30" height="auto"/>
+  <img src="img/icons/trailing-icon.svg" alt="Eventos" width="30" height="auto"/>
+</div>
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+## Componentes
+- **Mapa de Pontos de Risco:** Local, nome, status, botão de detalhes.
+- **Cards de Ocorrências:** título, local, data, descrição, fotos.
+- **Formulários responsivos:** com labels flutuantes e validação de campos.
+- **Botões de ação:** com hierarquia visual clara.
+- **Modais:** sobreposição com fundo opaco e animação suave.
+- **Rodapé:** com layout flexível e links úteis.
 
-
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+## Responsividade
+- O site é otimizado para telas pequenas (até 768px), médias (768–1024px) e grandes (acima de 1024px).
+- Menus se adaptam ao rodapé em dispositivos móveis.
+- Cards se reorganizam em colunas ou blocos.
+Exemplo de centralização:
+  ```css
+  main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+  ````
