@@ -1,4 +1,4 @@
-![Mapa](https://github.com/user-attachments/assets/d2de17c9-c404-4849-b62f-b42ba4cb464a)# Template padrão do site
+# Template padrão do site
 
 Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
