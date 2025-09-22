@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Guardians - Política de Privacidade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/politics.css">
+</head>
+<body>
+  <!-- Menu -->
+  <nav class="navbar">
+      <div class="logo">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Os Guardiões</span>
+      </div>
+
+      <!-- botão/ícone do menu -->
+      <div class="dropdown-user" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Meu Perfil</a>
+          <a href="politics.html">Política de Privacidade</a>
+      </div>
+  </nav>
+
+    <!-- Texto principal -->
+    <div class="container">
+        <h1>Política de Privacidade</h1>
+        <p><strong>Última atualização:</strong> 22/09/2025</p>
+
+        <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos os dados pessoais fornecidos por você ao utilizar nossa plataforma de denúncias ambientais e cadastro de eventos relacionados à preservação dos ecossistemas marinhos.</p>
+
+        <h2>1. Coleta de Dados Pessoais</h2>
+        <p>Coletamos os seguintes dados fornecidos diretamente por você:</p>
+        <ul>
+            <li>Nome completo</li>
+            <li>E-mail</li>
+            <li>Telefone (opcional)</li>
+            <li>Cidade e Estado</li>
+            <li>Informações relacionadas à denúncia (local, data e descrição)</li>
+            <li>Dados de eventos cadastrados - ocorrências (título, data, descrição e local)</li>
+        </ul>
+        <p>A coleta é feita por meio dos formulários disponíveis na plataforma, com o seu consentimento.</p>
+
+        <h2>2. Uso das Informações</h2>
+        <p>Os dados coletados são utilizados exclusivamente para:</p>
+        <ul>
+            <li>Processar e registrar denúncias</li>
+            <li>Divulgar eventos relacionados à preservação marinha</li>
+            <li>Comunicar informações importantes relacionadas à sua interação na plataforma</li>
+        </ul>
+
+        <h2>3. Compartilhamento de Dados</h2>
+        <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para:</p>
+        <ul>
+            <li>Atender exigências legais</li>
+            <li>Cooperar com autoridades competentes em investigações</li>
+            <li>Garantir a segurança e integridade da plataforma</li>
+        </ul>
+
+        <h2>4. Armazenamento e Segurança</h2>
+        <p>Seus dados são armazenados em ambiente seguro e com acesso restrito. Utilizamos medidas técnicas e administrativas para proteger suas informações contra acessos não autorizados, perda ou alteração.</p>
+
+        <h2>5. Seus Direitos</h2>
+        <p>Você pode, a qualquer momento:</p>
+        <ul>
+            <li>Solicitar acesso aos seus dados</li>
+            <li>Corrigir informações incorretas</li>
+            <li>Solicitar a exclusão dos seus dados, salvo obrigações legais</li>
+        </ul>
+
+        <h2>6. Alterações nesta Política</h2>
+        <p>Reservamo-nos o direito de alterar esta Política de Privacidade a qualquer momento. Recomendamos que você a revise periodicamente. Alterações entrarão em vigor a partir da data de publicação.</p>
+
+        <h2>7. Contato</h2>
+        <p>Se você tiver dúvidas sobre esta Política ou sobre o tratamento de seus dados, entre em contato conosco pelo e-mail: <a href="mailto:contato@osguardioes.org">contato@osguardioes.org</a></p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Os Guardiões</h2>
+            </div>
+            <div class="footer-links">
+                <!-- <a href="#home">Meu Perfil</a>
+                <a href="#news">Denúncias</a>
+                <a href="#news">Política de Privacidade</a> -->
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/images/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Os Guardiões. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // se clicar fora do menu, fecha
+        window.addEventListener('click', (event) => {
+            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

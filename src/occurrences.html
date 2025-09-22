@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blue Guardians - Eventos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/occurrences.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Os Guardiões</span>
+        </div>
+
+        <!-- botão/ícone do menu -->
+        <div class="dropdown-user" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="#">Meu Perfil</a>
+            <a href="politics.html">Política de Privacidade</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container mt-5 pt-5" style="margin-top: 10px !important;">
+        <div class="container-organizacao-eventos-custom d-flex flex-wrap gap-3 justify-content-between align-items-center">
+
+        <!-- Barra de pesquisa -->
+        <div class="navbar-pesquisa">
+            <div class="d-flex gap-3 align-items-center">
+            <input type="text" class="form-control input-pesquisa" placeholder="Buscar ocorrências..." aria-label="Buscar ocorrências" />
+            <button class="btn btn-pesquisa" aria-label="Buscar"><i class="fa fa-search"></i></button>
+            </div>
+        </div>   
+
+        <!-- Botões de ação -->
+        <div class="organizacao-botoes d-flex gap-2">
+            <div class="dropdown">
+            <button class="ordenar-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                        Ordenar por
+                    </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="ordenar-alfabetica">Ordem Alfabética (A-Z)</a></li>
+                <li><a class="dropdown-item" href="#" id="ordenar-proximos">Últimas Ocorrências</a></li>
+            </ul>
+            </div>
+            <button type="button" class="bnt-criar-evento" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registre uma ocorrência</button>
+        </div>
+        </div>
+    
+        <!-- Modal de criação de evento -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #370A54; color: #FFF;">
+                <h5 class="modal-title" id="staticBackdropLabel">Nova Ocorrência</h5>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="mb-2">
+                        <label for="formTitle" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="inputTitle" required />
+                    </div>
+                    <div class="mb-2">
+                        <label for="selectOcorrencia" class="form-label">Ocorrência</label>
+                        <select id="selectOcorrencia" class="form-control" required>
+                            <option value="" disabled selected>Selecione o tipo de ocorrência</option>
+                            <option value="furto">Furto</option>
+                            <option value="assalto">Assalto à mão armada</option>
+                            <option value="vandalismo">Vandalismo / Depredação</option>
+                            <option value="estelionato">Golpe / Estelionato</option>
+                            <option value="briga">Briga / Conflito</option>
+                            <option value="tráfico">Tráfico de drogas</option>
+                            <option value="veiculo-suspeito">Veículo suspeito</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="formTextareaDescricao" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="textareaDescricao" rows="3" required></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="formDate" class="form-label">Data</label>
+                            <input id="inputDate" class="form-control" type="date" required />
+                        </div>
+                        <div class="col">
+                            <label for="formTime" class="form-label">Horário</label>
+                            <input type="time" id="inputTime" class="form-control" required />
+                        </div>
+                    </div>
+
+                    <!-- Campo para upload de imagem -->
+                    <div class="mb-3 upload-box">
+                        <label for="imgUpload" class="form-label">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>*Anexe aqui sua foto do ocorrido</span>
+                        </label>
+
+                        <!-- input de arquivo escondido -->
+                        <input type="file" id="imgUpload" name="img" accept="image/*" hidden>
+
+                        <!-- área de pré-visualização -->
+                        <div id="preview" class="preview-area">Clique ou arraste a imagem aqui</div>
+                    </div>
+
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button id="btnSalvarEvento" type="submit" class="btn-primario btn">Salvar</button>
+                <button type="button" class="btn-secundario btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards Ocorrências -->
+        <section class="cards">
+            <div class="card-grid">
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/ocorrências.jpg">
+                    <div class="card-content">
+                        <h1>Bairro: Avenida Afonso Pena</h1>
+                        <h1>Ocorrência: Furto</h1>
+                        <h1>Data: 22/09/2025</h1>
+                        <p>Venho por meio deste registrar que no dia 22/09, por volta das 17:06, fui vítima de furto...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+      <div id="paginacao" class="pagination text-center mt-4"></div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Os Guardiões</h2>
+            </div>
+            <div class="footer-links">
+                <!-- <a href="#home">Meu Perfil</a>
+                <a href="#news">Denúncias</a>
+                <a href="#news">Política de Privacidade</a> -->
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/images/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Os Guardiões. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="assets/js/occurrences.js"></script>
+
+    <script>
+        document.getElementById('imgUpload').addEventListener('change', function (e) {
+            const preview = document.getElementById('preview');
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (ev) {
+                    preview.innerHTML = `<img src="${ev.target.result}" alt="Pré-visualização">`;
+                }
+                reader.readAsDataURL(file);
+            } else {
+                preview.textContent = "Clique ou arraste a imagem aqui";
+            }
+        });
+        document.getElementById('preview').addEventListener('click', () => {
+            document.getElementById('imgUpload').click();
+        });
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // se clicar fora do menu, fecha
+        window.addEventListener('click', (event) => {
+            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
