@@ -13,7 +13,7 @@ O layout é responsivo e projetado com foco em clareza, acessibilidade e navega�
 
 
 ## Cores
-A paleta é inspirada nos tons oceânicos, com foco em contraste acessível e coerência ambiental:
+A paleta é inspirada nos tons de roxo, com foco em contraste acessível e coerência entre as cores:
 - **Roxo Primário (#370A54):** cabeçalhos, textos principais.
 - **Roxo Secundário (#874FAD):** botões ativos, textos e destaques.
 - **Roxo Terciário (#9781A6):** links e interações.
@@ -23,7 +23,7 @@ A paleta é inspirada nos tons oceânicos, com foco em contraste acessível e co
 - **Botão Desativado (#B2B2B2):** estados inativos.
 
 ## Tipografia
-A fonte principal utilizada no projeto é Poppins, por ser uma tipografia moderna, legível e versátil.
+A fonte principal utilizada no projeto é Open-Sans, por ser uma tipografia moderna, legível e versátil.
 
 | Função                 | Fonte     | Peso     | Tamanho aproximado |
 | ---------------------- | --------- | ---------| ------------------ |
@@ -33,8 +33,8 @@ A fonte principal utilizada no projeto é Poppins, por ser uma tipografia modern
 | Corpo do texto         | Open-Sans | Regular  | 14–16px    
 
 ### Padronização de Botões
-- **Primários:** fundo Azul Primário, texto branco, cantos arredondados.
-- **Secundários:** fundo Azul Secundário ou tom neutro (#9B99A4).
+- **Primários:** fundo Roxo Secundário, texto branco, cantos arredondados.
+- **Secundários:** fundo Roxo Terciário ou tom neutro (#9B99A4).
 - **Desativados:** cor #B2B2B2, texto branco.
 - **Padding:** entre 0.4rem e 1rem.
 
