@@ -39,14 +39,14 @@ A fonte principal utilizada no projeto é Open-Sans, por ser uma tipografia mode
 - **Padding:** entre 0.4rem e 1rem.
 
 ## Iconografia
-<img width="512" height="512" alt="facebook" src="https://github.com/user-attachments/assets/a152ed7f-24bd-4476-9b3b-c9d541a34ec2" />
-<img width="512" height="512" alt="twitter" src="https://github.com/user-attachments/assets/d8efa9a5-4dd9-4dec-a83a-3715a1eb5077" />
-<img width="512" height="512" alt="instagram" src="https://github.com/user-attachments/assets/84eb76d6-3017-4efe-9ce3-b343c72b49b2" />
-<img width="2000" height="2000" alt="Confirmacao_2" src="https://github.com/user-attachments/assets/d21588fe-7d7d-41c8-934a-405859e2fbe3" />
-<img width="100" height="100" alt="icons8-notícias-falsas-100" src="https://github.com/user-attachments/assets/4765a746-bd25-4815-b1aa-c17ccb16bae6" />
-<img width="100" height="100" alt="icons8-policial-masculino-100" src="https://github.com/user-attachments/assets/70958f97-0cee-44dc-9f41-f5ce92fa7aaa" />
-<img width="100" height="100" alt="icons8-transporte-100" src="https://github.com/user-attachments/assets/4f8dee15-97b7-484e-a2cd-c8de33ffee01" />
-<img width="456" height="359" alt="Logo" src="https://github.com/user-attachments/assets/6f4f3f27-0121-4d6c-ab24-28aee6b9dd7f" />
+<img width="32" height="32" alt="facebook" src="https://github.com/user-attachments/assets/a152ed7f-24bd-4476-9b3b-c9d541a34ec2" />
+<img width="32" height="32" alt="twitter" src="https://github.com/user-attachments/assets/d8efa9a5-4dd9-4dec-a83a-3715a1eb5077" />
+<img width="32" height="32" alt="instagram" src="https://github.com/user-attachments/assets/84eb76d6-3017-4efe-9ce3-b343c72b49b2" />
+<img width="32" height="32" alt="Confirmacao_2" src="https://github.com/user-attachments/assets/d21588fe-7d7d-41c8-934a-405859e2fbe3" />
+<img width="32" height="32" alt="icons8-notícias-falsas-100" src="https://github.com/user-attachments/assets/4765a746-bd25-4815-b1aa-c17ccb16bae6" />
+<img width="32" height="32" alt="icons8-policial-masculino-100" src="https://github.com/user-attachments/assets/70958f97-0cee-44dc-9f41-f5ce92fa7aaa" />
+<img width="32" height="32" alt="icons8-transporte-100" src="https://github.com/user-attachments/assets/4f8dee15-97b7-484e-a2cd-c8de33ffee01" />
+<img width="32" height="32" alt="Logo" src="https://github.com/user-attachments/assets/6f4f3f27-0121-4d6c-ab24-28aee6b9dd7f" />
 
 ## Componentes
 - **Mapa de Pontos de Risco:** Local, nome, status, botão de detalhes.
