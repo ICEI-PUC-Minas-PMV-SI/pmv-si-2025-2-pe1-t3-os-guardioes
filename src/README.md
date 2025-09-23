@@ -4,7 +4,7 @@ Este guia atualizado explica como configurar e executar os JSON Servers usando s
 ## Pré-requisitos
 - Node.js instalado (versão 14+)
 - NPM (vem com Node.js)
-- Projeto clonado no diretório: `No caminho que desejar\pmv-si-2025-1-pe1-t4-blue-guardians`
+- Projeto clonado no diretório: `No caminho que desejar\pmv-si-2025-2-pe1-t3-os-guardioes`
 
 ## Instalação do Site
 
