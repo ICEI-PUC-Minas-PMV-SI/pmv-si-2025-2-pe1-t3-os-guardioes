@@ -14,19 +14,41 @@ Antes de começar, você precisa ter instalado em sua máquina:
 > git --version
 > ```
 
+## Passo 1: Clonar o Repositório
+No terminal, execute:
 
-## Instalação do Site
+> ```bash
+> git clone https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t4-blue-guardians.git
+> ```
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+## Passo 2: Instalar Dependências
+Execute no terminal (na raiz do projeto):
 
-## Histórico de versões
+```bash
+npm install
+```
+## Passo 3: Iniciar os Servidores
+Execute o comando dentro da pasta api (C:\source\assets\api):
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
+```bash
+npm run api
+```
 
-## Requisitos
-- Node.js (LTS)
-- npm
+Isso iniciará:
+Servidor principal na porta 3001 com db.json
 
-## Passos rápidos
+## Comandos Git Úteis
+Para atualizar seu repositório local com a versão mais recente do GitHub:
+
+> ```bash
+> git pull origin main
+> ```
+
+Para enviar suas alterações:
+
+> ```bash
+> git add .
+> git commit -m "Descrição do que foi alterado"
+> git push origin main
+> ```
+
