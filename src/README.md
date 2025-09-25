@@ -2,17 +2,18 @@
 Este guia atualizado explica como configurar e executar os JSON Servers usando sua estrutura de diretórios atual.
 
 ## Pré-requisitos
-- Node.js instalado (versão 14+)
-- NPM (vem com Node.js)
-- Projeto clonado no diretório: `No caminho que desejar\pmv-si-2025-2-pe1-t3-os-guardioes`
+Antes de começar, você precisa ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/) (versão recomendada: LTS)
+- [npm](https://www.npmjs.com/) (instalado junto com o Node.js)
+- [Git](https://git-scm.com/)
 
-Dica: Para conferir se já possui, rode no terminal:
+> **Dica:** Para conferir se já possui, rode no terminal:
+> ```bash
+> node -v
+> npm -v
+> git --version
+> ```
 
-```json
-node -v
-npm -v
-git --version
-```
 
 ## Instalação do Site
 
