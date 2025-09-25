@@ -6,6 +6,14 @@ Este guia atualizado explica como configurar e executar os JSON Servers usando s
 - NPM (vem com Node.js)
 - Projeto clonado no diretório: `No caminho que desejar\pmv-si-2025-2-pe1-t3-os-guardioes`
 
+Dica: Para conferir se já possui, rode no terminal:
+
+```json
+node -v
+npm -v
+git --version
+```
+
 ## Instalação do Site
 
 O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
