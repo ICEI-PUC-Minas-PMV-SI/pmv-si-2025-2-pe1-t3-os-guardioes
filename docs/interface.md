@@ -8,7 +8,10 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 ## User Flow
 Link do userflow completo: https://miro.com/app/board/uXjVJIuY2p0=/?share_link_id=878541162934
 
-<img width="920" height="343" alt="Captura de tela 2025-09-29 103704" src="https://github.com/user-attachments/assets/6788feeb-d20e-48bf-ade8-54bcad859cd3" />
+<img width="215" height="306" alt="Captura de tela 2025-09-29 103954" src="https://github.com/user-attachments/assets/2afb69fe-669d-4242-80fb-dea220bd5987" />
+<img width="208" height="302" alt="Captura de tela 2025-09-29 104002" src="https://github.com/user-attachments/assets/38a45e2f-dc8f-455c-a47c-4fe9bb98f642" />
+<img width="212" height="299" alt="Captura de tela 2025-09-29 104007" src="https://github.com/user-attachments/assets/b6abcf2c-3840-4546-a59a-88e6ce79c7bc" />
+<img width="208" height="299" alt="Captura de tela 2025-09-29 104014" src="https://github.com/user-attachments/assets/408ebc8a-46e3-418c-998a-2570dab8f36f" />
 
 ## Wireframes
 
