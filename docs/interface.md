@@ -14,21 +14,13 @@ Link do userflow completo: https://miro.com/app/board/uXjVJIuY2p0=/?share_link_i
 <img width="208" height="299" alt="Captura de tela 2025-09-29 104014" src="https://github.com/user-attachments/assets/408ebc8a-46e3-418c-998a-2570dab8f36f" />
 
 ## Wireframes
+Link do Wireframe completo: https://miro.com/app/board/uXjVJB5nZj0=/?share_link_id=522981761079
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
 
-### Exemplo
+<img width="1125" height="348" alt="Captura de tela 2025-09-30 181754" src="https://github.com/user-attachments/assets/47f6b3d4-720f-4276-b660-06d05f2337f3" />
+<img width="1450" height="439" alt="Captura de tela 2025-09-30 181907" src="https://github.com/user-attachments/assets/53e56ef6-1706-4dc1-bd28-1b435e928f7a" />
+<img width="1430" height="490" alt="Captura de tela 2025-09-30 181945" src="https://github.com/user-attachments/assets/c8c96fd9-c0eb-4e22-a5ef-d26a0d902495" />
 
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
