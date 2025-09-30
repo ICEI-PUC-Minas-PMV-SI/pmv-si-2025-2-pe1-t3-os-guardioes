@@ -27,10 +27,10 @@ A fonte principal utilizada no projeto é Open-Sans, por ser uma tipografia mode
 
 | Função                 | Fonte     | Peso     | Tamanho aproximado |
 | ---------------------- | --------- | ---------| ------------------ |
-| Título da página       | Open-Sans | Bold     | 20–24px            |
-| Títulos de seção       | Open-Sans | SemiBold | 18–20px            |
-| Rótulos de componentes | Open-Sans | Medium   | 14–16px            |
-| Corpo do texto         | Open-Sans | Regular  | 14–16px    
+| Título da página       | Poppins   | Bold     | 20–24px            |
+| Títulos de seção       | Poppins   | SemiBold | 18–20px            |
+| Rótulos de componentes | Poppins   | Medium   | 14–16px            |
+| Corpo do texto         | Poppins   | Regular  | 14–16px    
 
 ### Padronização de Botões
 - **Primários:** fundo Roxo Secundário, texto branco, cantos arredondados.
