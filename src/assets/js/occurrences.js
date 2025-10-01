@@ -2,25 +2,25 @@
 const API_URL = "http://localhost:3000/occurrences";
 
 // Elementos do DOM
-const btnSalvar = document.getElementById("btnSalvarEvento");
-const inputBairro = document.getElementById("inputTitle");
-const selectTipo = document.getElementById("selectOcorrencia");
+const btnSalvar         = document.getElementById("btnSalvarEvento");
+const inputBairro       = document.getElementById("inputTitle");
+const selectTipo        = document.getElementById("selectOcorrencia");
 const textareaDescricao = document.getElementById("textareaDescricao");
-const inputDate = document.getElementById("inputDate");
-const inputTime = document.getElementById("inputTime");
-const imgUpload = document.getElementById("imgUpload");
-const cardsContainer = document.querySelector(".card-grid");
+const inputDate         = document.getElementById("inputDate");
+const inputTime         = document.getElementById("inputTime");
+const imgUpload         = document.getElementById("imgUpload");
+const cardsContainer    = document.querySelector(".card-grid");
 
-// NOVO: elementos de busca/ordenação
-const inputBusca = document.querySelector(".input-pesquisa");
-const btnBusca = document.querySelector(".btn-pesquisa");
-const ordenarAZ = document.getElementById("ordenar-alfabetica");
-const ordenarRecentes = document.getElementById("ordenar-proximos");
+// Elementos de busca/ordenação
+const inputBusca        = document.querySelector(".input-pesquisa");
+const btnBusca          = document.querySelector(".btn-pesquisa");
+const ordenarAZ         = document.getElementById("ordenar-alfabetica");
+const ordenarRecentes   = document.getElementById("ordenar-proximos");
 
 // NOVO: armazena todas as ocorrências carregadas
-let listaOcorrencias = [];
+let listaOcorrencias    = [];
 
-// Carregar cards ao abrir
+// Carregar cards ao abrir tela de ocorrências
 async function carregarOcorrencias() {
   cardsContainer.innerHTML = "<p>Carregando...</p>";
   try {
@@ -69,11 +69,11 @@ function formatarData(dataIso) {
 btnSalvar.addEventListener("click", async (e) => {
   e.preventDefault();
 
-  const bairro = inputBairro.value.trim();
+  const bairro         = inputBairro.value.trim();
   const tipoOcorrencia = selectTipo.value;
-  const descricao = textareaDescricao.value.trim();
-  const data = inputDate.value;
-  const hora = inputTime.value;
+  const descricao      = textareaDescricao.value.trim();
+  const data           = inputDate.value;
+  const hora           = inputTime.value;
 
   if (!bairro || !tipoOcorrencia || !descricao || !data || !hora) {
     alert("Preencha todos os campos!");
@@ -90,11 +90,7 @@ btnSalvar.addEventListener("click", async (e) => {
   const novaOcorrencia = {bairro, tipoOcorrencia, descricao, dataHora, image: imageBase64, userId: 1};
 
   try {
-    const resp = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(novaOcorrencia),
-    });
+    const resp = await fetch(API_URL, {method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(novaOcorrencia),});
 
     if (!resp.ok) throw new Error("Erro ao salvar");
 
@@ -114,18 +110,18 @@ btnSalvar.addEventListener("click", async (e) => {
 // Converte arquivo para Base64
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
+    const reader   = new FileReader();
+    reader.onload  = () => resolve(reader.result);
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
 }
 
-/* ---------- NOVO: BUSCA E ORDENAÇÃO ---------- */
+/*  Busca e Ordenação */
 
 // Busca por bairro
 function filtrarPorBairro() {
-  const termo = inputBusca.value.toLowerCase().trim();
+  const termo     = inputBusca.value.toLowerCase().trim();
   const filtradas = listaOcorrencias.filter(o =>
     o.bairro.toLowerCase().includes(termo)
   );
@@ -134,17 +130,13 @@ function filtrarPorBairro() {
 
 // Ordenar A–Z por bairro
 ordenarAZ.addEventListener("click", () => {
-  const ordenadas = [...listaOcorrencias].sort((a,b) =>
-    a.bairro.localeCompare(b.bairro)
-  );
+  const ordenadas = [...listaOcorrencias].sort((a,b) => a.bairro.localeCompare(b.bairro));
   renderCards(ordenadas);
 });
 
 // Ordenar por data/hora mais recente
 ordenarRecentes.addEventListener("click", () => {
-  const ordenadas = [...listaOcorrencias].sort((a,b) =>
-    new Date(b.dataHora) - new Date(a.dataHora)
-  );
+  const ordenadas = [...listaOcorrencias].sort((a,b) =>new Date(b.dataHora) - new Date(a.dataHora));
   renderCards(ordenadas);
 });
 
@@ -152,7 +144,6 @@ ordenarRecentes.addEventListener("click", () => {
 btnBusca.addEventListener("click", filtrarPorBairro);
 inputBusca.addEventListener("keyup", e => { if (e.key === "Enter") filtrarPorBairro(); });
 
-/* -------------------------------------------- */
 
 // Inicialização
 carregarOcorrencias();
