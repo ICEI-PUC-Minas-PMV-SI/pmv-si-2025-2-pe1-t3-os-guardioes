@@ -39,26 +39,45 @@ async function carregarOcorrencias() {
 
 // Monta os cards na tela
 function renderCards(lista) {
-  if (lista.length === 0) {
+  if (!lista || lista.length === 0) {
     cardsContainer.innerHTML = "<p>Nenhuma ocorrência registrada.</p>";
     return;
   }
 
   cardsContainer.innerHTML = lista
-    .map(
-      (oc) => `
-      <div class="card">
-        <img src="${oc.image || "assets/images/ocorrências.jpg"}" alt="Imagem ocorrência">
-        <div class="card-content">
-          <h1>Bairro: ${oc.bairro}</h1>
-          <h1>Ocorrência: ${oc.tipoOcorrencia}</h1>
-          <h1>Data: ${formatarData(oc.dataHora)}</h1>
-          <p>${oc.descricao}</p>
+    .map((oc) => `
+      <div class="card position-relative">
+        <!-- Ícone de status no canto superior direito -->
+        <div class="status-icon">
+          ${oc.status === "confirmada" ? '<i class="fa-solid fa-circle-check" title="Confirmada"></i>' : ""}
+          ${oc.status === "reportada" ? '<i class="fa-solid fa-triangle-exclamation" title="Reportada"></i>' : ""}
         </div>
-      </div>`
-    )
+
+        <img src="${oc.image || "assets/images/ocorrências.jpg"}" alt="Imagem ocorrência">
+
+        <div class="card-content">
+          <!-- Linha superior: bairro (esquerda) + 3 pontinhos (direita) -->
+          <div class="card-top">
+            <span class="bairro">Bairro: ${oc.bairro}</span>
+            <i class="fa-solid fa-ellipsis-vertical card-options" data-id="${oc.id}" aria-label="Mais opções"></i>
+          </div>
+
+          <p class="tipo">Ocorrência: ${oc.tipoOcorrencia}</p>
+          <p class="data">Data: ${formatarData(oc.dataHora)}</p>
+          <p class="descricao">${oc.descricao}</p>
+        </div>
+      </div>
+    `)
     .join("");
+
+  // adiciona evento para abrir o menu de opções
+  document.querySelectorAll(".card-options").forEach(btn => {
+    btn.addEventListener("click", () => abrirMenuOcorrencia(btn.dataset.id));
+  });
 }
+
+
+
 
 function formatarData(dataIso) {
   const dt = new Date(dataIso);
@@ -147,3 +166,40 @@ inputBusca.addEventListener("keyup", e => { if (e.key === "Enter") filtrarPorBai
 
 // Inicialização
 carregarOcorrencias();
+
+let ocorrenciaSelecionadaId = null;
+
+// Abre o modal de opções
+function abrirMenuOcorrencia(id) {
+  ocorrenciaSelecionadaId = id;
+  const modal = new bootstrap.Modal(document.getElementById("modalOpcao"));
+  modal.show();
+}
+
+// Ações dos botões
+document.getElementById("btnConfirmar").addEventListener("click", () => atualizarStatus("confirmada"));
+document.getElementById("btnReportar").addEventListener("click", () => atualizarStatus("reportada"));
+
+async function atualizarStatus(novoStatus) {
+  if (!ocorrenciaSelecionadaId) return;
+
+  try {
+    const resp = await fetch(`${API_URL}/${ocorrenciaSelecionadaId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: novoStatus })
+    });
+
+    if (!resp.ok) throw new Error("Erro ao atualizar status");
+
+    // Fecha modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById("modalOpcao"));
+    modal.hide();
+
+    // Recarrega os cards
+    carregarOcorrencias();
+  } catch (e) {
+    alert("Erro: " + e.message);
+  }
+}
+

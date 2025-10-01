@@ -331,6 +331,70 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .card-top .bairro {
+    flex: 1;              
+    margin: 0;            
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-texto-base_escuro);
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+    box-shadow: none !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-options {
+    flex: 0 0 auto;
+    font-size: 1.2rem;
+    color: #555;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+  .card-options:hover {
+    color: #000;
+    background: transparent; 
+  }
+
+  .status-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .status-icon .fa-circle-check { font-size: 1rem; color: #28a745; }
+  .status-icon .fa-triangle-exclamation { font-size: 1rem; color: #dc3545; }
+
+  .card img { display: block; }
+
+  .card-content { padding-top: 12px; }
+
+  .card-options {
+    font-size: 1.3rem;
+    color: #555;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+
+  .card-options:hover {
+    color: #000;
+  }
   
   .btn {
     background-color: var(--cor-secundaria);
@@ -351,7 +415,28 @@
 
   .center-btn {
     text-align: center;
-    margin-top: 60px; /* opcional */
+    margin-top: 60px;
+  }
+
+  .btn-action {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #333; /* borda preta fina */
+    border-radius: 20px; /* borda mais arredondada */
+    padding: 8px 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* espaço entre ícone e texto */
+    min-width: 130px; /* garante largura igual */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-action:hover {
+    background-color: #f8f8f8;
+    border-color: #000;
   }
 
 
