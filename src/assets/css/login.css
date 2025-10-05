@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Gradiente invertido (do escuro no topo para claro embaixo) */
+body {
+    background: linear-gradient(to bottom, #3a0f5f, #c1a0e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+}
+
+.login-container input::placeholder {
+    color: #999;
+}
+
+.login-container a {
+    font-size: 12px;
+    color: #ddd;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #7d4fff; /* Cor do botão roxo */
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #5a30b2;
+}
