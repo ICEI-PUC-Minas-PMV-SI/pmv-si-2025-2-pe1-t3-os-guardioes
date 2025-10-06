@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --cor-primaria: #370A54;
+    --cor-secundaria: #874FAD;
+    --cor-terciaria: #D4CADA;
+    --cor-fundo: #f3f3f3;
+    --cor-fundo-branco: #FFFF;
+    --cor-texto-claro: #9B99A4;
+    --cor-texto-base: #747070;
+    --cor-texto-base_escuro: #504d4d;
+    --cor-texto-base_preto: #000000;
+    --cor-texto-base_clara: #FFFF;
+}
+
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins';
 }
 
 body, html {
@@ -27,7 +42,7 @@ body {
 }
 
 .login-container h1 {
-    color: #fff;
+    color: var(--cor-texto-base_clara);
     font-size: 16px;
     margin-bottom: 30px;
 }
@@ -48,24 +63,27 @@ body {
     color: #999;
 }
 
-.login-container a {
+.login-container .password {
     font-size: 12px;
-    color: #ddd;
+    color: var(--cor-texto-base_clara);
     margin-bottom: 20px;
     text-decoration: none;
     display: block;
 }
 
-.login-container button {
-    padding: 12px;
-    background-color: #7d4fff; /* Cor do botão roxo */
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
+.login-container .password:hover {
+    text-decoration: underline;
+    color: var(--cor-texto-base_clara);
 }
 
-.login-container button:hover {
-    background-color: #5a30b2;
+.login-container .btn-entrar {
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-base_clara);
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.login-container .btn-entrar:hover {
+    background-color: #9565b4;
 }

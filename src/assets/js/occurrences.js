@@ -77,8 +77,6 @@ function renderCards(lista) {
 }
 
 
-
-
 function formatarData(dataIso) {
   const dt = new Date(dataIso);
   return dt.toLocaleDateString("pt-BR") + " " + dt.toLocaleTimeString("pt-BR", {hour: "2-digit", minute:"2-digit"});
@@ -177,29 +175,87 @@ function abrirMenuOcorrencia(id) {
 }
 
 // Ações dos botões
+// Ações dos botões no modal de Opções (modalOpcao)
 document.getElementById("btnConfirmar").addEventListener("click", () => atualizarStatus("confirmada"));
-document.getElementById("btnReportar").addEventListener("click", () => atualizarStatus("reportada"));
+
+document.getElementById("btnReportar").addEventListener("click", () => {
+    const modalOpcao = bootstrap.Modal.getInstance(document.getElementById("modalOpcao"));
+    modalOpcao.hide();
+
+    // 2. Abrir o novo modal de Reporte
+    const modalReporte = new bootstrap.Modal(document.getElementById("modalReporte"));
+    modalReporte.show();
+});
+
+// Adicione a nova URL da API (assumindo que você configurou o json-server)
+const API_REPORTES_URL = "http://localhost:3000/ocorrencias_descricao";
+
+// Elementos do novo modal de Reporte (Você precisará adicioná-los ao HTML)
+const inputDescricaoReporte = document.getElementById("inputDescricaoReporte");
+const btnSalvarReporte = document.getElementById("btnSalvarReporte");
 
 async function atualizarStatus(novoStatus) {
-  if (!ocorrenciaSelecionadaId) return;
+    if (!ocorrenciaSelecionadaId) return;
 
-  try {
-    const resp = await fetch(`${API_URL}/${ocorrenciaSelecionadaId}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: novoStatus })
-    });
+    try {
+        const resp = await fetch(`${API_URL}/${ocorrenciaSelecionadaId}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: novoStatus })
+        });
 
-    if (!resp.ok) throw new Error("Erro ao atualizar status");
+        if (!resp.ok) throw new Error("Erro ao atualizar status");
+        
+        // Se for uma confirmação, fechar o modal de Opções (o de reporte já foi fechado)
+        if (novoStatus === "confirmada") {
+             const modal = bootstrap.Modal.getInstance(document.getElementById("modalOpcao"));
+             modal.hide();
+        }
 
-    // Fecha modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById("modalOpcao"));
-    modal.hide();
-
-    // Recarrega os cards
-    carregarOcorrencias();
-  } catch (e) {
-    alert("Erro: " + e.message);
-  }
+        // Recarrega os cards
+        carregarOcorrencias();
+    } catch (e) {
+        alert("Erro: " + e.message);
+        throw e; // Lança o erro para ser capturado pela função de reporte
+    }
 }
+
+btnSalvarReporte.addEventListener("click", async () => {
+    const descricaoReporte = inputDescricaoReporte.value.trim();
+
+    if (!descricaoReporte) {
+        alert("Por favor, insira o motivo da denúncia desta ocorrência.");
+        return;
+    }
+    
+    // Objeto para salvar no subconjunto 'ocorrencias_descricao'
+    const novoReporte = {
+        ocorrenciaId: ocorrenciaSelecionadaId,
+        descricaoReporte: descricaoReporte,
+        userId: 1, // Assumindo que você tem o userId logado
+        dataHoraReporte: new Date().toISOString()
+    };
+    
+    try {
+        // 1. POST para salvar a descrição do reporte
+        const respReporte = await fetch(API_REPORTES_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(novoReporte)
+        });
+
+        if (!respReporte.ok) throw new Error("Erro ao salvar descrição do reporte");
+
+        // 2. Se salvou o reporte, PATCH para atualizar o status da ocorrência para 'reportada'
+        await atualizarStatus('reportada'); 
+        
+        // Limpar o campo e fechar o modal
+        inputDescricaoReporte.value = "";
+        const modalReporte = bootstrap.Modal.getInstance(document.getElementById("modalReporte"));
+        modalReporte.hide();
+
+    } catch (e) {
+        alert("Erro ao reportar ocorrência: " + e.message);
+    }
+});
 

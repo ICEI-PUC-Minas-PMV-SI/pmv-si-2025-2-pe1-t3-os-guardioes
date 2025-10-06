@@ -1,82 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os Guardiões - Início</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Os Guardiões - Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Menu -->
-    <nav class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-shield-halved"></i>
-            <span>Os Guardiões</span>
-        </div>
-
-        <!-- botão/ícone do menu -->
-        <div class="dropdown-user" id="menuBtn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <div class="dropdown-content" id="dropdownMenu">
-            <a href="profile.html">Meu Perfil</a>
-            <a href="politics.html">Política de Privacidade</a>
-        </div>
-    </nav>
-
-
-    <!-- Módulos (Cards) -->
-    <main class="main-wrapper">
-        <div class="container">
-            <a href="occurrences.html" class="card">
-                <h3>Registrar Ocorrência</h3>
-                <img src="assets/images/icons8-policial-masculino-100.png" alt="Registrar Ocorrência">
-            </a>
-
-            <a href="#" class="card">
-                <h3>Pontos de Risco</h3>
-                <img class="img_1" src="assets/images/Mapa.jpg" alt="Pontos de Risco">
-            </a>
-
-            <a href="dashboard.html" class="card">
-                <h3>Ranking de Segurança</h3>
-                <img src="assets/images/Ranking.png" alt="Ranking de Segurança">
-            </a>
-
-            <!-- <a href="#" class="card">
-                <h3>Confirmação de Ocorrências</h3>
-                <img class="img_2" src="assets/images/Confirmacao_2.png" alt="Confirmação de Ocorrências">
-            </a> -->
-
-            <a href="#" class="card">
-                <h3>Análise De Denúncias</h3>
-                <img src="assets/images/icons8-notícias-falsas-100.png" alt="Análise De Denúncias">
-            </a>
-
-            <a href="#" class="card">
-                <h3>Gerenciamento de Informações Críticas</h3>
-                <img src="assets/images/icons8-transporte-100.png" alt="">
-            </a>
-        </div>
-    </main>
-
-    <!--Scripts-->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const dropdownMenu = document.getElementById('dropdownMenu');
-
-        menuBtn.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('show');
-        });
-
-        // se clicar fora do menu, fecha
-        window.addEventListener('click', (event) => {
-            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
-            }
-        });
-    </script>
+    <div class="login-container">
+        <h1>CUIDAR DO NOSSO BAIRRO É CUIDAR DE QUEM AMAMOS</h1>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="password" placeholder="Senha" required>
+            <a href="esqueceu_senha.html" class="password">Esqueceu sua senha?</a>
+            <a href="home.html" class="btn-entrar">Entrar</a>
+        </form>
+    </div>
 </body>
 </html>
