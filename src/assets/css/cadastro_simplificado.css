@@ -33,7 +33,10 @@ body {
   border-radius: 8px;
   border: none;
   font-size: 1rem;
+  box-sizing: border-box; /* garante que padding e bordas não alterem o tamanho */
+  appearance: none; /* uniformiza o visual nos navegadores */
 }
+
 
 .btn {
   width: 100%;
