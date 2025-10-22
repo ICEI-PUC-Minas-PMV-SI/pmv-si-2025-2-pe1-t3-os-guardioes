@@ -11,25 +11,27 @@
     <form class="form">
       <div class="input-group">
         <input type="text" placeholder="Nome" required>
-        <input type="text" placeholder="Rua" required>
-      </div>
-      <div class="input-group">
         <input type="email" placeholder="E-mail" required>
-        <input type="text" placeholder="Número" required>
-        <input type="text" placeholder="Complemento">
       </div>
       <div class="input-group">
         <input type="text" placeholder="CPF" required>
-        <input type="text" placeholder="Bairro" required>
-      </div>
-      <div class="input-group">
         <input type="text" placeholder="Celular" required>
-        <input type="text" placeholder="Cidade" required>
+        <input type="text" placeholder="Idade" required>
       </div>
       <div class="input-group">
-        <input type="text" placeholder="Idade" required>
-        <input type="text" placeholder="CEP" required>
-        <input type="text" placeholder="UF" required>
+        <input type="text" id="cep" placeholder="CEP" required>
+        <input type="text" id="rua" placeholder="Endereço" required>
+      </div>
+      <div class="input-group">
+        <input type="text" id="bairro" placeholder="Bairro" required>
+      </div>
+      <div class="input-group">
+        <input type="text" id="numero" placeholder="Número" required>
+        <input type="text" placeholder="Complemento">
+      </div>
+      <div class="input-group">
+        <input type="text" id="cidade" placeholder="Cidade" required>
+        <input type="text" id="uf" placeholder="UF" required>
       </div>
       <div class="checkbox-group">
         <label><input type="checkbox"> Confirmo que li e aceito as Políticas de Segurança e Privacidade</label>
@@ -38,5 +40,9 @@
       <button type="submit" class="btn" onclick="location.href='cadastro_simplificado.html'">Salvar</button>
     </form>
   </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="assets/js/cadastro.js"></script>
 </body>
 </html>
