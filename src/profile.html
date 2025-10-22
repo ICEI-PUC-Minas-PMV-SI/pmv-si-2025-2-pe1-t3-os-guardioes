@@ -10,6 +10,11 @@
 <body>
     <!-- Menu -->
     <nav class="navbar">
+        <!-- Botão de voltar -->
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
         <div class="logo">
             <i class="fa-solid fa-shield-halved"></i>
             <span>Os Guardiões</span>
@@ -139,5 +144,14 @@
             }
         });
     </script>
+
+    <script>
+        const backBtn = document.querySelector('.back-btn');
+        
+        if (window.location.pathname.endsWith('index.html')) {
+            backBtn.style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>

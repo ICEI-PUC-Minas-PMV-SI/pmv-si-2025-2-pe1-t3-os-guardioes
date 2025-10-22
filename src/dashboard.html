@@ -4,14 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard de Segurança</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/dashboard.css"> 
 </head>
 <body>
 
-  <header>Ranking de Segurança</header>
+  <!-- Menu -->
+  <nav class="navbar">
+      <!-- Botão de voltar -->
+      <button class="back-btn" onclick="history.back()">
+          <i class="fa-solid fa-arrow-left"></i>
+      </button>
 
-  <div class="dashboard">
-    <table>
+      <div class="logo">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Os Guardiões</span>
+      </div>
+
+      <!-- botão/ícone do menu -->
+      <div class="dropdown-user" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="dropdown-content" id="dropdownMenu">
+          <a href="profile.html">Meu Perfil</a>
+          <a href="politics.html">Política de Privacidade</a>
+      </div>
+  </nav>
+
+  <br>
+
+  <div class="dashboard-wrapper">
+    <header>Ranking de Segurança</header>
+
+    <div class="dashboard">
+      <table>
       <tr>
         <th>Posição</th>
         <th>Bairro</th>
@@ -68,7 +95,33 @@
       <div class="bar-label">São Pedro</div>
       <div class="bar-label">Morumbi</div>
     </div>
+    </div>
   </div>
+
+  <!--Scripts-->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    menuBtn.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // se clicar fora do menu, fecha
+    window.addEventListener('click', (event) => {
+        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+        }
+    });
+    </script>
+
+  <script>
+    const backBtn = document.querySelector('.back-btn');
+    
+    if (window.location.pathname.endsWith('index.html')) {
+        backBtn.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
