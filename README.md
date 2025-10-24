@@ -11,10 +11,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 * Claire Hausman de Morais
-* Andressa Vitória Miranda
 * Daniel Leão e Souza da Silva
 * Filipe Ramos Lima
-* Arthur Vaz Machado
 * Matheus Rodrigues de Souza
 
 
