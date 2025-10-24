@@ -258,4 +258,3 @@ btnSalvarReporte.addEventListener("click", async () => {
         alert("Erro ao reportar ocorrência: " + e.message);
     }
 });
-
