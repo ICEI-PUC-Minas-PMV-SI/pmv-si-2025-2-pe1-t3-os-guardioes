@@ -27,8 +27,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|RF-001| Descrição | Filipe | index.html |
+|RF-002| Descrição | Filipe | login.html |
+|RF-003| Descrição | Filipe | esqueceu_senha.html |
+|RF-004| Descrição | Responsável | index.html |
+|RF-005| Descrição | Responsável | index.html |
+|RF-006| Descrição | Responsável | index.html |
+|RF-007| Descrição | Responsável | index.html |
+|RF-008| Descrição | Responsável | index.html |
+|RF-009| Descrição | Responsável | index.html |
+|RF-0010| Descrição | Responsável | index.html |
+|RF-0011| Descrição | Responsável | index.html |
+|RF-0012| Descrição | Responsável | index.html |
 
 ## Descrição das estruturas:
 
