@@ -46,7 +46,147 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | login.html     | Formulário de autenticação  | Tela de login do usuário        |                                                |
-| Nome           | Texto             | Nome do usuário cadastrado                | Diego                                          |
+| Nome           | Texto             | Nome do usuário cadastrado                | Yude                                          |
 | Senha       | Texto (senha)        | Senha do usuário para acesso ao sistema| ******** |
 | Link “Esqueceu sua senha?”  | Link  | Redireciona o usuário para a página de recuperação de senha | esqueceu_senha.html         |
+
+## Esqueceu Senha
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| esqueceu_senha.html| Formulário de recuperação| Tela para o usuário redefinir sua senha| |
+| E-mail           | Texto              | Endereço de e-mail cadastrado para envio do link de recuperação| Yude@gmail.com      |
+| Botão “Enviar link de recuperação”           | Botão              | Envia solicitação de redefinição de senha|                                        |
+
+## Cadastro Simplificado
+| Nome                         | Tipo                                    | Descrição                                           | Exemplo                                           |
+| ---------------------------- | --------------------------------------- | --------------------------------------------------- | ------------------------------------------------- |
+| `cadastro_simplificado.html` | Formulário de dados pessoais e endereço | Etapa inicial de criação de conta                   | —                                                 |
+| Nome                         | Texto                                   | Nome completo do usuário                            | Yude                                     |
+| E-mail                       | Texto                                   | E-mail do usuário                                   | Yude@gmail.com |
+| CPF                          | Texto (número)                          | Cadastro de Pessoa Física                           | 123.456.789-00                                    |
+| Celular                      | Texto                                   | Número de celular do usuário                        | 4002-8922                                   |
+| Idade                        | Número (inteiro)                        | Idade do usuário                                    | 28                                                |
+| Rua                          | Texto                                   | Nome da rua                                         | Rua das Acácias                                   |
+| Número                       | Texto                                   | Número do endereço                                  | 123                                               |
+| Complemento                  | Texto                                   | Detalhes adicionais do endereço                     | Apto 202                                          |
+| Bairro                       | Texto                                   | Bairro onde o usuário mora                          | Floresta                                          |
+| Cidade                       | Texto                                   | Cidade do usuário                                   | Belo Horizonte                                    |
+| CEP                          | Texto (número)                          | Código de endereçamento postal                      | 30150-230                                         |
+| UF                           | Texto                                   | Estado do usuário                                   | MG                                                |
+| Aceitar políticas            | Booleano (Sim/Não)                      | Confirmação de leitura das políticas de privacidade | Sim                                               |
+| Receber novidades            | Booleano (Sim/Não)                      | Preferência de recebimento de e-mails               | Sim                                               |
+| Botão “Salvar”               | Botão                                   | Salva os dados e avança para o cadastro completo    | —                                                 |
+
+
+## Cadastro Completo
+| Nome                     | Tipo                                  | Descrição                                       | Exemplo   |
+| ------------------------ | ------------------------------------- | ----------------------------------------------- | --------- |
+| `cadastro_completo.html` | Formulário de finalização do cadastro | Etapa final de criação da conta                 | —         |
+| Sexo                     | Seleção                               | Sexo do usuário                                 | Masculino |
+| Categoria                | Seleção                               | Tipo de usuário                                 | Morador   |
+| Senha                    | Texto (senha)                         | Senha criada pelo usuário (mínimo 8 caracteres) | ********  |
+| Confirmação              | Texto (senha)                         | Confirmação da senha digitada                   | ********  |
+| Botão “Criar conta”      | Botão                                 | Finaliza o cadastro e cria a conta              | —         |
+
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+## Modelo
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+
+
+
+
+
 
