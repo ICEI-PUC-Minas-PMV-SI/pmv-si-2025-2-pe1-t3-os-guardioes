@@ -27,18 +27,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| Descrição | Filipe | index.html |
-|RF-002| Descrição | Filipe | login.html |
-|RF-003| Descrição | Filipe | esqueceu_senha.html |
-|RF-004| Descrição | Responsável | index.html |
-|RF-005| Descrição | Responsável | index.html |
-|RF-006| Descrição | Responsável | index.html |
-|RF-007| Descrição | Responsável | index.html |
-|RF-008| Descrição | Responsável | index.html |
-|RF-009| Descrição | Responsável | index.html |
-|RF-0010| Descrição | Responsável | index.html |
-|RF-0011| Descrição | Responsável | index.html |
-|RF-0012| Descrição | Responsável | index.html |
+|RF-001| O sistema deve exibir uma tela inicial com as opções “Criar uma conta” e “Entrar”, sendo o primeiro contato do usuário com o aplicativo. | Filipe | index.html |
+|RF-002| O sistema deve permitir que o usuário faça login informando nome e senha, com a opção de recuperar a senha caso a tenha esquecido. | Filipe | login.html |
+|RF-003| O sistema deve permitir que o usuário recupere sua senha informando o e-mail cadastrado. | Filipe | esqueceu_senha.html |
+|RF-004| O sistema deve permitir o cadastro simplificado do usuário, com campos de informações pessoais e endereço, além de opções para aceitar políticas de privacidade e receber novidades por e-mail. | Filipe | cadastro_simplificado.html |
+|RF-005| O sistema deve permitir que o usuário complete o cadastro criando uma senha e informando o sexo e a categoria (morador ou comerciante). | Filipe | cadastro_completo..html |
+|RF-006| Descrição | Responsável | .html |
+|RF-007| Descrição | Responsável | .html |
+|RF-008| Descrição | Responsável | .html |
+|RF-009| Descrição | Responsável | .html |
+|RF-0010| Descrição | Responsável | .html |
+|RF-0011| Descrição | Responsável | .html |
+|RF-0012| Descrição | Responsável | .html |
 
 ## Descrição das estruturas:
 
