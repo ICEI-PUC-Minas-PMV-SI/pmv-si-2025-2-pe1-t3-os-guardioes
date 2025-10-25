@@ -32,7 +32,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-003| O sistema deve permitir que o usuário recupere sua senha informando o e-mail cadastrado. | Filipe | esqueceu_senha.html |
 |RF-004| O sistema deve permitir o cadastro simplificado do usuário, com campos de informações pessoais e endereço, além de opções para aceitar políticas de privacidade e receber novidades por e-mail. | Filipe | cadastro_simplificado.html |
 |RF-005| O sistema deve permitir que o usuário complete o cadastro criando uma senha e informando o sexo e a categoria (morador ou comerciante). | Filipe | cadastro_completo..html |
-|RF-006| Descrição | Responsável | .html |
+|RF-006| Descrição | Daniel Leâo | dashboard.html |
 |RF-007| Descrição | Responsável | .html |
 |RF-008| Descrição | Responsável | .html |
 |RF-009| Descrição | Responsável | .html |
