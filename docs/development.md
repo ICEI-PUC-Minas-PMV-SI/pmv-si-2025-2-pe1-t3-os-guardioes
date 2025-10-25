@@ -35,10 +35,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-006| Descrição | Claire H. | home.html |
 |RF-007| Descrição | Claire H. | occurrences.html |
 |RF-008| Descrição | Claire H. | occurrences_reports.html |
-|RF-009| Descrição | Daniel Leâo | dashboard.html |
-|RF-0010| Descrição | Responsável | .html |
-|RF-0011| Descrição | Responsável | .html |
-|RF-0012| Descrição | Responsável | .html |
+|RF-009| Descrição | Claire H. | info.html |
+|RF-0010| Descrição | Claire H. | profile.html |
+|RF-0011| Descrição | Claire H. | politics.html |
+|RF-0012| Descrição | Daniel Leâo | dashboard.html |
 
 ## Descrição das estruturas:
 
