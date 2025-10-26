@@ -38,7 +38,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-009| Descrição | Claire H. | info.html |
 |RF-0010| Descrição | Claire H. | profile.html |
 |RF-0011| Descrição | Claire H. | politics.html |
-|RF-0012| Descrição | Daniel Leâo | dashboard.html |
+|RF-0012| O sistema deve ser capaz de mostrar aos usuários o ranking de segurança dos bairros ao seu redor através de um dashboard. | Daniel Leâo | dashboard.html |
 
 ## Descrição das estruturas:
 
@@ -89,13 +89,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Botão “Criar conta”      | Botão                                 | Finaliza o cadastro e cria a conta              | —         |
 
 
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
+##  Dashboard Ranking de Segurança
+|  **Nome**            | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:      |-------------------|-------------------------------------------|------------------------------------------------|
+|  Ranking de Segurança| Dashboard         | Mostra o rank de segurança dos bairros    | centro 20 assaltos                             |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
 
 ## Modelo
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
