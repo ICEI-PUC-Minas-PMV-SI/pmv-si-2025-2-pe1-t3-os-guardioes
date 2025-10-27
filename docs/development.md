@@ -32,12 +32,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-003| O sistema deve permitir que o usuário recupere sua senha informando o e-mail cadastrado. | Filipe Lima | esqueceu_senha.html |
 |RF-004| O sistema deve permitir o cadastro simplificado do usuário, com campos de informações pessoais e endereço, além de opções para aceitar políticas de privacidade e receber novidades por e-mail. | Filipe Lima | cadastro_simplificado.html |
 |RF-005| O sistema deve permitir que o usuário complete o cadastro criando uma senha e informando o sexo e a categoria (morador ou comerciante). | Filipe Lima | cadastro_completo..html |
-|RF-006| Descrição | Claire H. | home.html |
-|RF-007| Descrição | Claire H. | occurrences.html |
-|RF-008| Descrição | Claire H. | occurrences_reports.html |
-|RF-009| Descrição | Claire H. | info.html |
-|RF-0010| Descrição | Claire H. | profile.html |
-|RF-0011| Descrição | Claire H. | politics.html |
+|RF-006| O sistema deve permitir que o usuário navegue entre os módulos, caso ele esteja logado. | Claire H. | home.html |
+|RF-007| O sistema deve permitir que o usuário inclua ocorrências com os dados requeridos pela tela de cadastro | Claire H. | occurrences.html |
+|RF-008| O sistema deve permitir que o usuário visualize todas as ocorrências reportadas | Claire H. | occurrences_reports.html |
+|RF-009| O sistema deve permitir que o usuário inclua informações suspeitas, entretanto que não são ocorrências | Claire H. | info.html |
+|RF-0010| O sistema deve permitir a visualização dos dados do usuário cadastrado | Claire H. | profile.html |
+|RF-0011| O sistema deve permitir que o usuário veja a politica de privacidade dos seus dados | Claire H. | politics.html |
 |RF-0012| O sistema deve ser capaz de mostrar aos usuários o ranking de segurança dos bairros ao seu redor através de um dashboard. | Daniel Leâo | dashboard.html |
 
 ## Descrição das estruturas:
@@ -97,93 +97,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
 | Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
 
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
 
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-
-## Modelo
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
-| Nome           | Tipo              | Descrição                                 | Exemplo                                        |
 
 
 
