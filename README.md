@@ -6,7 +6,7 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Uma aplicação web responsiva para colaboração comunitária em segurança, onde moradores/comerciantes registram e consultam ocorrências, validam informações, recebem insights (ranking/mapa) e contam com moderação para reduzir falsos relatos — começando por um bairro de referência, mas com desenho para escala multibairros.
 
 ## Integrantes
 
