@@ -77,6 +77,7 @@ function renderCards(lista) {
 }
 
 
+
 function formatarData(dataIso) {
   const dt = new Date(dataIso);
   return dt.toLocaleDateString("pt-BR") + " " + dt.toLocaleTimeString("pt-BR", {hour: "2-digit", minute:"2-digit"});
@@ -258,3 +259,7 @@ btnSalvarReporte.addEventListener("click", async () => {
         alert("Erro ao reportar ocorrência: " + e.message);
     }
 });
+
+
+
+
