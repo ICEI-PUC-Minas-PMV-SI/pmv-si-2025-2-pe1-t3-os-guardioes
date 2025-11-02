@@ -10,12 +10,21 @@
 <body>
     <div class="login-container">
         <h1>CUIDAR DO NOSSO BAIRRO É CUIDAR DE QUEM AMAMOS</h1>
-        <form>
+
+        <!-- Chama a função login(event) ao enviar -->
+        <form onsubmit="login(event)">
             <input type="text" placeholder="Nome" required>
             <input type="password" placeholder="Senha" required>
+
+            <!-- Link de esqueci a senha -->
             <a href="esqueceu_senha.html" class="password">Esqueceu sua senha?</a>
-            <a href="home.html" class="btn-entrar">Entrar</a>
+
+            <!-- Botão correto para enviar o formulário -->
+            <button type="submit" class="btn-entrar">Entrar</button>
         </form>
     </div>
+
+    <!-- Script do JavaScript, no final do body -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
