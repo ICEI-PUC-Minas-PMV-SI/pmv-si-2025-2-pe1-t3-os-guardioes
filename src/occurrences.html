@@ -12,6 +12,11 @@
 <body>
     <!-- Menu -->
     <nav class="navbar">
+        <!-- Botão de voltar -->
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
         <div class="logo">
             <i class="fa-solid fa-shield-halved"></i>
             <span>Os Guardiões</span>
@@ -68,8 +73,9 @@
               <div class="modal-body">
                 <form>
                     <div class="mb-2">
-                        <label for="formTitle" class="form-label">Bairro</label>
-                        <input type="text" class="form-control" id="inputTitle" required/>
+                        <label for="inputBairro" class="form-label">Bairro</label>
+                        <input list="bairrosList" id="inputBairro" class="form-control" placeholder="Escolha ou pesquise o bairro" required>
+                        <datalist id="bairrosList"></datalist>
                     </div>
                     <div class="mb-2">
                         <label for="selectOcorrencia" class="form-label">Ocorrência</label>
@@ -214,6 +220,13 @@
             dropdownMenu.classList.remove('show');
             }
         });
+    </script>
+    <script>
+        const backBtn = document.querySelector('.back-btn');
+        
+        if (window.location.pathname.endsWith('index.html')) {
+            backBtn.style.display = 'none';
+        }
     </script>
 </body>
 </html>

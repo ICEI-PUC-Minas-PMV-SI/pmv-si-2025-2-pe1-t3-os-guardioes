@@ -27,16 +27,80 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|RF-001| O sistema deve exibir uma tela inicial com as opções “Criar uma conta” e “Entrar”, sendo o primeiro contato do usuário com o aplicativo. | Filipe Lima | index.html |
+|RF-002| O sistema deve permitir que o usuário faça login informando nome e senha, com a opção de recuperar a senha caso a tenha esquecido. | Filipe Lima | login.html |
+|RF-003| O sistema deve permitir que o usuário recupere sua senha informando o e-mail cadastrado. | Filipe Lima | esqueceu_senha.html |
+|RF-004| O sistema deve permitir o cadastro simplificado do usuário, com campos de informações pessoais e endereço, além de opções para aceitar políticas de privacidade e receber novidades por e-mail. | Filipe Lima | cadastro_simplificado.html |
+|RF-005| O sistema deve permitir que o usuário complete o cadastro criando uma senha e informando o sexo e a categoria (morador ou comerciante). | Filipe Lima | cadastro_completo..html |
+|RF-006| O sistema deve permitir que o usuário navegue entre os módulos, caso ele esteja logado. | Claire H. | home.html |
+|RF-007| O sistema deve permitir que o usuário inclua ocorrências com os dados requeridos pela tela de cadastro | Claire H. | occurrences.html |
+|RF-008| O sistema deve permitir que o usuário visualize todas as ocorrências reportadas | Claire H. | occurrences_reports.html |
+|RF-009| O sistema deve permitir que o usuário inclua informações suspeitas, entretanto que não são ocorrências | Claire H. | info.html |
+|RF-0010| O sistema deve permitir a visualização dos dados do usuário cadastrado | Claire H. | profile.html |
+|RF-0011| O sistema deve permitir que o usuário veja a politica de privacidade dos seus dados | Claire H. | politics.html |
+|RF-0012| O sistema deve ser capaz de mostrar aos usuários o ranking de segurança dos bairros ao seu redor através de um dashboard. | Daniel Leâo | dashboard.html |
 
 ## Descrição das estruturas:
 
-## Notícia
+## Login
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
+| login.html     | Formulário de autenticação  | Tela de login do usuário        |                                                |
+| Nome           | Texto             | Nome do usuário cadastrado                | Yude                                          |
+| Senha       | Texto (senha)        | Senha do usuário para acesso ao sistema| ******** |
+| Link “Esqueceu sua senha?”  | Link  | Redireciona o usuário para a página de recuperação de senha | esqueceu_senha.html         |
+
+## Esqueceu Senha
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| esqueceu_senha.html| Formulário de recuperação| Tela para o usuário redefinir sua senha| |
+| E-mail           | Texto              | Endereço de e-mail cadastrado para envio do link de recuperação| Yude@gmail.com      |
+| Botão “Enviar link de recuperação”           | Botão              | Envia solicitação de redefinição de senha|                                        |
+
+## Cadastro Simplificado
+| Nome                         | Tipo                                    | Descrição                                           | Exemplo                                           |
+| ---------------------------- | --------------------------------------- | --------------------------------------------------- | ------------------------------------------------- |
+| `cadastro_simplificado.html` | Formulário de dados pessoais e endereço | Etapa inicial de criação de conta                   | —                                                 |
+| Nome                         | Texto                                   | Nome completo do usuário                            | Yude                                     |
+| E-mail                       | Texto                                   | E-mail do usuário                                   | Yude@gmail.com |
+| CPF                          | Texto (número)                          | Cadastro de Pessoa Física                           | 123.456.789-00                                    |
+| Celular                      | Texto                                   | Número de celular do usuário                        | 4002-8922                                   |
+| Idade                        | Número (inteiro)                        | Idade do usuário                                    | 28                                                |
+| Rua                          | Texto                                   | Nome da rua                                         | Rua das Acácias                                   |
+| Número                       | Texto                                   | Número do endereço                                  | 123                                               |
+| Complemento                  | Texto                                   | Detalhes adicionais do endereço                     | Apto 202                                          |
+| Bairro                       | Texto                                   | Bairro onde o usuário mora                          | Floresta                                          |
+| Cidade                       | Texto                                   | Cidade do usuário                                   | Belo Horizonte                                    |
+| CEP                          | Texto (número)                          | Código de endereçamento postal                      | 30150-230                                         |
+| UF                           | Texto                                   | Estado do usuário                                   | MG                                                |
+| Aceitar políticas            | Booleano (Sim/Não)                      | Confirmação de leitura das políticas de privacidade | Sim                                               |
+| Receber novidades            | Booleano (Sim/Não)                      | Preferência de recebimento de e-mails               | Sim                                               |
+| Botão “Salvar”               | Botão                                   | Salva os dados e avança para o cadastro completo    | —                                                 |
+
+
+## Cadastro Completo
+| Nome                     | Tipo                                  | Descrição                                       | Exemplo   |
+| ------------------------ | ------------------------------------- | ----------------------------------------------- | --------- |
+| `cadastro_completo.html` | Formulário de finalização do cadastro | Etapa final de criação da conta                 | —         |
+| Sexo                     | Seleção                               | Sexo do usuário                                 | Masculino |
+| Categoria                | Seleção                               | Tipo de usuário                                 | Morador   |
+| Senha                    | Texto (senha)                         | Senha criada pelo usuário (mínimo 8 caracteres) | ********  |
+| Confirmação              | Texto (senha)                         | Confirmação da senha digitada                   | ********  |
+| Botão “Criar conta”      | Botão                                 | Finaliza o cadastro e cria a conta              | —         |
+
+
+##  Dashboard Ranking de Segurança
+|  **Nome**            | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:      |-------------------|-------------------------------------------|------------------------------------------------|
+|  Ranking de Segurança| Dashboard         | Mostra o rank de segurança dos bairros    | centro 20 assaltos                             |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
+| Nome                 | Tipo              | Descrição                                 | Exemplo                                        |
+
+
+
+
+
+
+
 

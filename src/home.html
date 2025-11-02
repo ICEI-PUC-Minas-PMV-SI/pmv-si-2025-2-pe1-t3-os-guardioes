@@ -10,6 +10,11 @@
 <body>
     <!-- Menu -->
     <nav class="navbar">
+        <!-- Botão de voltar -->
+        <button class="back-btn" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
         <div class="logo">
             <i class="fa-solid fa-shield-halved"></i>
             <span>Os Guardiões</span>
@@ -49,12 +54,12 @@
                 <img class="img_2" src="assets/images/Confirmacao_2.png" alt="Confirmação de Ocorrências">
             </a> -->
 
-            <a href="#" class="card">
+            <a href="occurrences_reports.html" class="card">
                 <h3>Análise De Denúncias</h3>
                 <img src="assets/images/icons8-notícias-falsas-100.png" alt="Análise De Denúncias">
             </a>
 
-            <a href="#" class="card">
+            <a href="info.html" class="card">
                 <h3>Gerenciamento de Informações Críticas</h3>
                 <img src="assets/images/icons8-transporte-100.png" alt="">
             </a>
@@ -73,6 +78,13 @@
                 dropdownMenu.classList.remove('show');
             }
         });
+    </script>
+    <script>
+        const backBtn = document.querySelector('.back-btn');
+
+        if (window.location.pathname.endsWith('index.html')) {
+            backBtn.style.display = 'none';
+        }
     </script>
 </body>
 </html>
