@@ -3,7 +3,7 @@ const API_URL = "http://localhost:3000/occurrences";
 
 // Elementos do DOM
 const btnSalvar         = document.getElementById("btnSalvarEvento");
-const inputBairro       = document.getElementById("inputTitle");
+const inputBairro       = document.getElementById("inputBairro");
 const selectTipo        = document.getElementById("selectOcorrencia");
 const textareaDescricao = document.getElementById("textareaDescricao");
 const inputDate         = document.getElementById("inputDate");
@@ -84,45 +84,50 @@ function formatarData(dataIso) {
 }
 
 // Salvar nova ocorrência
-btnSalvar.addEventListener("click", async (e) => {
-  e.preventDefault();
+btnSalvar.addEventListener("click", async () => {
+    const bairro         = inputBairro.value.trim();
+    const tipoOcorrencia = selectTipo.value;
+    const descricao      = textareaDescricao.value.trim();
+    const data           = inputDate.value;
+    const hora           = inputTime.value;
 
-  const bairro         = inputBairro.value.trim();
-  const tipoOcorrencia = selectTipo.value;
-  const descricao      = textareaDescricao.value.trim();
-  const data           = inputDate.value;
-  const hora           = inputTime.value;
+    if (!bairro || !tipoOcorrencia || !descricao || !data || !hora) {
+        alert("Preencha todos os campos!");
+        return;
+    }
 
-  if (!bairro || !tipoOcorrencia || !descricao || !data || !hora) {
-    alert("Preencha todos os campos!");
-    return;
-  }
+    const dataHora = `${data}T${hora}:00`;
 
-  const dataHora = `${data}T${hora}:00`;
+    let imageBase64 = "";
+    if (imgUpload.files.length > 0) {
+        imageBase64 = await fileToBase64(imgUpload.files[0]);
+    }
 
-  let imageBase64 = "";
-  if (imgUpload.files.length > 0) {
-    imageBase64 = await fileToBase64(imgUpload.files[0]);
-  }
+    const novaOcorrencia = { bairro, tipoOcorrencia, descricao, dataHora, image: imageBase64, userId: 1 };
 
-  const novaOcorrencia = {bairro, tipoOcorrencia, descricao, dataHora, image: imageBase64, userId: 1};
+    try {
+        const resp = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(novaOcorrencia)
+        });
 
-  try {
-    const resp = await fetch(API_URL, {method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(novaOcorrencia),});
+        if (!resp.ok) throw new Error("Erro ao salvar");
 
-    if (!resp.ok) throw new Error("Erro ao salvar");
+        // Fecha modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
+        modal.hide();
 
-    const modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
-    modal.hide();
+        // Limpa formulário
+        document.querySelector("#staticBackdrop form").reset();
+        document.getElementById('preview').textContent = "Clique ou arraste a imagem aqui";
 
-    document.querySelector("#staticBackdrop form").reset();
-    document.getElementById('preview').textContent = "Clique ou arraste a imagem aqui";
+        // Atualiza lista de cards
+        carregarOcorrencias();
 
-    // Atualiza lista de cards
-    carregarOcorrencias();
-  } catch (e) {
-    alert("Erro ao salvar ocorrência: " + e.message);
-  }
+    } catch (e) {
+        alert("Erro ao salvar ocorrência: " + e.message);
+    }
 });
 
 // Converte arquivo para Base64
