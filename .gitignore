@@ -1,2 +1,3 @@
 .vs/
 /src/assets/api/node_modules
+/src/assets/api/package-lock.json
