@@ -1,14 +1,9 @@
 {
-  "name": "api-guardioes",
-  "version": "1.0.0",
-  "private": true,
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "json-server": "^0.17.4",
-    "multer": "^2.0.2"
+    "json-server": "^1.0.0-beta.3"
   },
   "scripts": {
-    "api": "node server.js"
+    "api": "json-server --watch db.json --port 3000"
   }
 }
+
