@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Os Guardiões - Informações Críticas</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/occurrences.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Os Guardiões - Informações Críticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/occurrences.css">
+    <style>
+        /* Esconde o input nativo sem remover do fluxo de foco (acessível) */
+        .visually-hidden-input {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Menu -->
@@ -33,66 +47,93 @@
     </nav>
 
     <main class="container mt-5 pt-5">
-    <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#modalNovaInfo">Registrar Suspeita</button>
+        <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#modalNovaInfo">Registrar Suspeita</button>
 
-    <!-- Cards -->
-    <section class="cards mt-3">
-        <div id="card-grid" class="card-grid"></div>
-    </section>
+        <!-- Cards -->
+        <section class="cards mt-3">
+            <div id="card-grid" class="card-grid"></div>
+        </section>
     </main>
 
     <!-- Modal de inclusão -->
     <div class="modal fade" id="modalNovaInfo" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header" style="background-color: #370A54; color: #FFF;">
-            <h5 class="modal-title">Nova Suspeita</h5>
-        </div>
-        <div class="modal-body">
-            <form id="formNovaInfo">
-            <div class="mb-2">
-                <label class="form-label">Tipo</label>
-                <select id="selectTipo" class="form-control" required>
-                <option value="" disabled selected>Selecione o tipo</option>
-                <option value="Pessoa">Pessoa</option>
-                <option value="Veículo">Veículo</option>
-                <option value="Objeto">Objeto</option>
-                <option value="Outro">Outro</option>
-                </select>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Descrição</label>
-                <textarea id="textareaDescricao" class="form-control" rows="3" required></textarea>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Bairro</label>
-                <input id="inputBairro" type="text" class="form-control" required/>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Data e Hora</label>
-                <input id="inputDate" type="date" class="form-control mb-2" required/>
-                <input id="inputTime" type="time" class="form-control" required/>
-            </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #370A54; color: #FFF;">
+                    <h5 class="modal-title">Nova Suspeita</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="formNovaInfo">
+                        <div class="mb-2">
+                            <label class="form-label">Tipo</label>
+                            <select id="selectTipo" class="form-control" required>
+                                <option value="" disabled selected>Selecione o tipo</option>
+                                <option value="Pessoa">Pessoa</option>
+                                <option value="Veículo">Veículo</option>
+                                <option value="Objeto">Objeto</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
 
-            <!-- Upload de imagem -->
-            <div class="mb-3 upload-box">
-                <label for="imgUploadInfo" class="form-label">
-                <i class="fa-solid fa-camera"></i>
-                <span>*Anexe uma foto (opcional)</span>
-                </label>
-                <input type="file" id="imgUploadInfo" accept="image/*" hidden>
-                <div id="previewInfo" class="preview-area">Clique ou arraste a imagem aqui</div>
+                        <div class="mb-2">
+                            <label class="form-label">Descrição</label>
+                            <textarea id="textareaDescricao" class="form-control" rows="3" required></textarea>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Bairro</label>
+                            <input id="inputBairro" type="text" class="form-control" required />
+                        </div>
+
+                        <!-- Data e Hora -->
+                        <div class="mb-2">
+                            <label class="form-label">Data e Hora</label>
+
+                            <!-- Campo visível em DD/MM/AAAA (abre date picker nativo) -->
+                            <input id="inputDateBR"
+                                   type="text"
+                                   class="form-control mb-2"
+                                   inputmode="numeric"
+                                   placeholder="dd/mm/aaaa"
+                                   autocomplete="off"
+                                   required />
+
+                            <!-- Input nativo oculto para abrir o date picker -->
+                            <input id="inputDateNative" type="date" class="visually-hidden-input" aria-hidden="true" tabindex="-1" />
+
+                            <!-- Campo técnico (ISO YYYY-MM-DD) oculto para o JS -->
+                            <input id="inputDate" type="date" class="form-control mb-2 d-none" required />
+
+                            <!-- Hora 24h só HH:MM (sem segundos) -->
+                            <input id="inputTime"
+                                   type="text"
+                                   class="form-control"
+                                   inputmode="numeric"
+                                   placeholder="hh:mm"
+                                   pattern="^([01]\\d|2[0-3]):[0-5]\\d$"
+                                   required />
+                            <div class="form-text">Formato: 24h (ex.: 08:05 ou 21:30)</div>
+                        </div>
+
+                        <!-- Upload de imagem -->
+                        <div class="mb-3 upload-box">
+                            <label for="imgUploadInfo" class="form-label">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>*Anexe uma foto (opcional)</span>
+                            </label>
+                            <input type="file" id="imgUploadInfo" accept="image/*" hidden>
+                            <div id="previewInfo" class="preview-area">Clique ou arraste a imagem aqui</div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="btnSalvarInfo" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
             </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button id="btnSalvarInfo" class="btn btn-primary">Salvar</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        </div>
         </div>
     </div>
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="assets/js/info.js"></script>
@@ -109,16 +150,124 @@
         // se clicar fora do menu, fecha
         window.addEventListener('click', (event) => {
             if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
+                dropdownMenu.classList.remove('show');
             }
         });
-        </script>
+    </script>
 
     <script>
         const backBtn = document.querySelector('.back-btn');
-        
         if (window.location.pathname.endsWith('index.html')) {
             backBtn.style.display = 'none';
+        }
+    </script>
+
+    <!-- Data DD/MM/AAAA com date picker nativo + Hora 24h (HH:MM) -->
+    <script>
+        // Helpers
+        function pad2(n) { return String(n).padStart(2, '0'); }
+        function fmtDateYMD(d) { return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; }
+        function fmtDateBR(d) { return `${pad2(d.getDate())}/${pad2(d.getMonth() + 1)}/${d.getFullYear()}`; }
+        // devolve HH:MM em 24h
+        function fmtTimeHM(d) { return `${pad2(d.getHours())}:${pad2(d.getMinutes())}`; }
+
+        function brToISO(br) {
+            const m = String(br || '').trim().match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+            if (!m) return '';
+            const dd = Number(m[1]), mm = Number(m[2]), yyyy = Number(m[3]);
+            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return '';
+            return `${yyyy}-${pad2(mm)}-${pad2(dd)}`;
+        }
+
+        function isoToBR(iso) {
+            const m = String(iso || '').trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (!m) return '';
+            return `${m[3]}/${m[2]}/${m[1]}`;
+        }
+
+        function syncDateFromBR() {
+            const inputDateBR = document.getElementById('inputDateBR');
+            const inputDateISO = document.getElementById('inputDate');
+            const iso = brToISO(inputDateBR.value);
+            inputDateISO.value = iso;
+            inputDateBR.classList.toggle('is-invalid', iso === '');
+        }
+
+        // Máscara/validação HH:MM (24h)
+        function maskTimeHHMM(e) {
+            let v = e.target.value.replace(/[^\d]/g, ''); // só dígitos
+            if (v.length > 4) v = v.slice(0, 4);
+            if (v.length >= 3) v = v.slice(0, 2) + ':' + v.slice(2, 4);
+            e.target.value = v;
+
+            const ok = /^([01]\d|2[0-3]):[0-5]\d$/.test(v);
+            // só marca inválido quando tiver 5 chars (HH:MM) e for inválido
+            e.target.classList.toggle('is-invalid', v.length === 5 && !ok);
+        }
+
+        function fillNow() {
+            const now = new Date();
+            const inputDateBR = document.getElementById('inputDateBR');
+            const inputDateNative = document.getElementById('inputDateNative');
+            const inputDateISO = document.getElementById('inputDate');
+            const inputTime = document.getElementById('inputTime');
+
+            const ymd = fmtDateYMD(now);
+            const br = fmtDateBR(now);
+
+            if (inputDateBR) inputDateBR.value = br;   // DD/MM/AAAA
+            if (inputDateNative) inputDateNative.value = ymd; // YYYY-MM-DD (picker)
+            if (inputDateISO) inputDateISO.value = ymd; // YYYY-MM-DD (técnico p/ JS)
+            if (inputTime) inputTime.value = fmtTimeHM(now);  // HH:MM
+        }
+
+        // Abre o date picker nativo ao clicar no campo BR
+        function openNativePicker() {
+            const inputDateNative = document.getElementById('inputDateNative');
+            // copia o valor atual (se o usuário digitou no BR)
+            const iso = brToISO(document.getElementById('inputDateBR').value);
+            if (iso) inputDateNative.value = iso;
+
+            if (typeof inputDateNative.showPicker === 'function') {
+                inputDateNative.showPicker(); // Chrome/Edge modernos
+            } else {
+                inputDateNative.focus();
+                inputDateNative.click();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fillNow();
+
+            // Sincroniza BR -> ISO técnico (usado no info.js)
+            const inputDateBR = document.getElementById('inputDateBR');
+            inputDateBR.addEventListener('input', syncDateFromBR);
+            inputDateBR.addEventListener('blur', syncDateFromBR);
+            inputDateBR.addEventListener('click', openNativePicker); // abre o date picker ao clicar
+
+            // Quando o usuário escolher no date picker nativo, espelha para BR e ISO técnico
+            const inputDateNative = document.getElementById('inputDateNative');
+            inputDateNative.addEventListener('change', () => {
+                const iso = inputDateNative.value; // YYYY-MM-DD
+                const br = isoToBR(iso);
+                document.getElementById('inputDateBR').value = br;
+                document.getElementById('inputDate').value = iso;
+                document.getElementById('inputDateBR').classList.remove('is-invalid');
+            });
+
+            // Hora 24h (HH:MM)
+            const inputTime = document.getElementById('inputTime');
+            inputTime.addEventListener('input', maskTimeHHMM);
+            inputTime.addEventListener('blur', () => {
+                const ok = /^([01]\d|2[0-3]):[0-5]\d$/.test(inputTime.value);
+                inputTime.classList.toggle('is-invalid', !ok);
+            });
+        });
+
+        // Atualiza para o "agora" toda vez que abrir o modal
+        const modalEl = document.getElementById('modalNovaInfo');
+        if (modalEl) {
+            modalEl.addEventListener('shown.bs.modal', fillNow);
         }
     </script>
 </body>
