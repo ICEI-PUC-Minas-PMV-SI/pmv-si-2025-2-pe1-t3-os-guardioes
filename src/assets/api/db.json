@@ -1,4 +1,26 @@
 {
+  "usuarios": [
+    {
+      "id": 1,
+      "tipoPessoa": "fisica",
+      "nome": "João Silva",
+      "email": "joao@email.com",
+      "sexo": "masculino",
+      "cpf": "123.456.789-00",
+      "cnpj": "",
+      "celular": "(31) 91234-5678",
+      "idade": 25,
+      "cep": "30130-000",
+      "rua": "Rua da Liberdade",
+      "bairro": "Centro",
+      "numero": "123",
+      "complemento": "",
+      "cidade": "Belo Horizonte",
+      "uf": "MG",
+      "senha": "123456"
+    }
+  ],
+
   "occurrences": [
     {
       "id": "fb8b",
