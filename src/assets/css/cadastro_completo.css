@@ -46,6 +46,40 @@ body {
   font-size: 1rem;
 }
 
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s;
+}
+
+/* Ícone de seta personalizado */
+select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-group select,
+.input-group input {
+  flex: 1;
+  min-width: 160px;
+}
+
 .checkbox-group {
   display: flex;
   flex-direction: column;
