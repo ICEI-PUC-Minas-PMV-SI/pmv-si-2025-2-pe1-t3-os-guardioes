@@ -105,33 +105,4 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Erro ao consultar o CEP. Verifique sua conexão.");
     }
   });
-
-  // 🔹 Salvar temporariamente no localStorage e ir para a tela de senha
-  document.getElementById('formCadastroCompleto').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const usuario = {
-      tipoPessoa: Pessoa.value,
-      nome: document.getElementById('nome').value,
-      email: document.getElementById('email').value,
-      sexo: document.getElementById('sexo').value,
-      cpf: document.getElementById('cpf').value,
-      cnpj: document.getElementById('cnpj').value,
-      celular: document.getElementById('celular').value,
-      idade: document.getElementById('idade').value,
-      cep: document.getElementById('cep').value,
-      rua: document.getElementById('rua').value,
-      bairro: document.getElementById('bairro').value,
-      numero: document.getElementById('numero').value,
-      complemento: document.getElementById('complemento').value,
-      cidade: document.getElementById('cidade').value,
-      uf: document.getElementById('uf').value,
-    };
-
-    // Salva temporariamente no localStorage
-    localStorage.setItem('usuarioTemp', JSON.stringify(usuario));
-
-    // Redireciona para a tela de senha
-    window.location.href = 'cadastro_senha.html';
-  });
 });
