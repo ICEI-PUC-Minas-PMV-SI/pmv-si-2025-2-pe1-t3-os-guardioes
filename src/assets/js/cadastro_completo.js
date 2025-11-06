@@ -1,43 +1,137 @@
-const API_URL = "http://localhost:3000/usuarios";
+document.addEventListener("DOMContentLoaded", () => {
+  const Pessoa = document.getElementById("tipoPessoa");
+  const cpf    = document.getElementById("cpf");
+  const cnpj   = document.getElementById("cnpj");
+  const sexo   = document.getElementById("sexo");
+  const idade  = document.getElementById("idade");
+  const cep    = document.getElementById("cep");
+  const numero = document.getElementById("numero");
 
-async function cadastrarCompleto(event) {
-  event.preventDefault();
+  // 🔹 Função para alternar campos conforme tipo de pessoa
+  function atualizarCamposPessoa() {
+    if (Pessoa.value === "fisica") {
+      cpf.style.display   = "inline-block";
+      cpf.required        = true;
+      cnpj.style.display  = "none";
+      cnpj.required       = false;
+      sexo.style.display  = "inline-block";
+      idade.style.display = "inline-block";
+    } else if (Pessoa.value === "juridica") {
+      cnpj.style.display  = "inline-block";
+      cnpj.required       = true;
+      cpf.style.display   = "none";
+      cpf.required        = false;
+      sexo.style.display  = "none";
+      idade.style.display = "none";
+    } else {
+      cpf.style.display   = "none";
+      cnpj.style.display  = "none";
+      sexo.style.display  = "none";
+      idade.style.display = "none";
+    }
+  }
 
-  const tipoPessoa = document.getElementById("tipoPessoa").value;
-  const nome       = document.querySelector('input[placeholder="Nome"]').value.trim();
-  const email      = document.querySelector('input[placeholder="E-mail"]').value.trim();
-  const sexo       = document.getElementById("sexo").value;
-  const cpf        = document.getElementById("cpf").value;
-  const cnpj       = document.getElementById("cnpj").value;
-  const celular    = document.getElementById("celular").value;
-  const idade      = document.getElementById("idade").value;
-  const cep        = document.getElementById("cep").value;
-  const rua        = document.getElementById("rua").value;
-  const bairro     = document.getElementById("bairro").value;
-  const numero     = document.getElementById("numero").value;
-  const cidade     = document.getElementById("cidade").value;
-  const uf         = document.getElementById("uf").value;
+  // 🔹 Executar uma vez ao carregar a página (corrige o bug do “ficar travado”)
+  atualizarCamposPessoa();
 
-  const user = {
-    tipoPessoa,
-    nome,
-    email,
-    sexo: tipoPessoa === "fisica" ? sexo : "",
-    cpf: tipoPessoa === "fisica" ? cpf : "",
-    cnpj: tipoPessoa === "juridica" ? cnpj : "",
-    celular,
-    idade: tipoPessoa === "fisica" ? idade : "",
-    cep,
-    rua,
-    bairro,
-    numero,
-    cidade,
-    uf,
-    senha: "" // será preenchida na próxima etapa
-  };
+  // 🔹 Atualizar quando o usuário mudar o tipo
+  Pessoa.addEventListener("change", atualizarCamposPessoa);
 
-  // Salvar os dados no localStorage até criar a senha
-  localStorage.setItem("novoUsuario", JSON.stringify(user));
+  // 🔹 Aplicar máscaras
+  function aplicarMascara(input, tipo) {
+    let valor = input.value.replace(/\D/g, "");
 
-  window.location.href = "cadastro_simplificado.html";
-}
+    if (tipo === "cpf") {
+      valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+      valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+      valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    }
+
+    if (tipo === "cnpj") {
+      valor = valor.replace(/^(\d{2})(\d)/, "$1.$2");
+      valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+      valor = valor.replace(/\.(\d{3})(\d)/, ".$1/$2");
+      valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
+    }
+
+    if (tipo === "celular") {
+      valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
+      valor = valor.replace(/(\d{5})(\d{4})$/, "$1-$2");
+    }
+
+    if (tipo === "cep") {
+      valor = valor.replace(/(\d{5})(\d{3})$/, "$1-$2");
+    }
+
+    input.value = valor;
+  }
+
+  cpf.addEventListener("input", (e) => aplicarMascara(e.target, "cpf"));
+  cnpj.addEventListener("input", (e) => aplicarMascara(e.target, "cnpj"));
+  document.getElementById("celular").addEventListener("input", (e) => aplicarMascara(e.target, "celular"));
+  cep.addEventListener("input", (e) => aplicarMascara(e.target, "cep"));
+
+  // 🔹 Permitir apenas números em idade e número
+  ["idade", "numero"].forEach(id => {
+    document.getElementById(id).addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/\D/g, "");
+    });
+  });
+
+  // 🔹 Consultar endereço pelo CEP (ViaCEP)
+  cep.addEventListener("blur", async () => {
+    const cepLimpo = cep.value.replace(/\D/g, "");
+    if (cepLimpo.length !== 8) return; // só consulta se tiver 8 dígitos
+
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
+      const data = await response.json();
+
+      if (data.erro) {
+        alert("CEP não encontrado!");
+        return;
+      }
+
+      document.getElementById("rua").value = data.logradouro || "";
+      document.getElementById("bairro").value = data.bairro || "";
+      document.getElementById("cidade").value = data.localidade || "";
+      document.getElementById("uf").value = data.uf || "";
+
+      // 🔸 Focar automaticamente no campo número
+      numero.focus();
+
+    } catch (error) {
+      console.error("Erro ao buscar CEP:", error);
+      alert("Erro ao consultar o CEP. Verifique sua conexão.");
+    }
+  });
+
+  // 🔹 Salvar temporariamente no localStorage e ir para a tela de senha
+  document.getElementById('formCadastroCompleto').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const usuario = {
+      tipoPessoa: Pessoa.value,
+      nome: document.getElementById('nome').value,
+      email: document.getElementById('email').value,
+      sexo: document.getElementById('sexo').value,
+      cpf: document.getElementById('cpf').value,
+      cnpj: document.getElementById('cnpj').value,
+      celular: document.getElementById('celular').value,
+      idade: document.getElementById('idade').value,
+      cep: document.getElementById('cep').value,
+      rua: document.getElementById('rua').value,
+      bairro: document.getElementById('bairro').value,
+      numero: document.getElementById('numero').value,
+      complemento: document.getElementById('complemento').value,
+      cidade: document.getElementById('cidade').value,
+      uf: document.getElementById('uf').value,
+    };
+
+    // Salva temporariamente no localStorage
+    localStorage.setItem('usuarioTemp', JSON.stringify(usuario));
+
+    // Redireciona para a tela de senha
+    window.location.href = 'cadastro_senha.html';
+  });
+});

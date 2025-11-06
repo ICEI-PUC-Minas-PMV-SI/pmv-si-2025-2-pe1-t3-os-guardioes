@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro Simplificado</title>
-  <link rel="stylesheet" href="assets/css/cadastro_simplificado.css">
+  <title>Cadastro - Senha</title>
+  <link rel="stylesheet" href="assets/css/cadastro_senha.css">
 </head>
 <body>
   <div class="container">
     <h1>JUNTOS, SOMOS A MAIOR PROTEÇÃO DO NOSSO BAIRRO</h1>
-    <form class="form">
-      <input type="password" placeholder="Senha" required>
-      <input type="password" placeholder="Confirmação de senha" required>
-      <button type="submit" class="btn" >Criar conta</button>
+    <form id="formSenha" class="form">
+      <input type="password" id="senha" placeholder="Senha" required>
+      <input type="password" id="confirmarSenha" placeholder="Confirmação de senha" required>
+      <button type="submit" class="btn">Criar conta</button>
     </form>
   </div>
+
+  <!--Scripts-->
+  <script src="assets/js/cadastro_senha.js"></script>
 </body>
 </html>
- 
