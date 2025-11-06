@@ -5,9 +5,9 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 function cadastrarCompleto(event) {
   event.preventDefault();
 
-  const nome = document.querySelector('input[placeholder="Nome"]').value;
-  const email = document.querySelector('input[placeholder="E-mail"]').value;
-  const senha = prompt("Crie uma senha para sua conta:");
+  const nome = document.querySelector('input[placeholder="Nome"]').value.trim();
+  const email = document.querySelector('input[placeholder="E-mail"]').value.trim();
+  const senha = document.querySelector('input[placeholder="Senha"]').value.trim();
 
   if (!nome || !email || !senha) {
     alert("Preencha todos os campos!");
@@ -34,8 +34,8 @@ function cadastrarSimplificado(event) {
 
   const sexo = document.querySelector("select:nth-of-type(1)").value;
   const categoria = document.querySelector("select:nth-of-type(2)").value;
-  const senha = document.querySelector('input[placeholder="Senha"]').value;
-  const confirma = document.querySelector('input[placeholder="Confirmação de senha"]').value;
+  const senha = document.querySelector('input[placeholder="Senha"]').value.trim();
+  const confirma = document.querySelector('input[placeholder="Confirmação de senha"]').value.trim();
 
   if (!sexo || !categoria || !senha || !confirma) {
     alert("Preencha todos os campos!");
@@ -67,16 +67,18 @@ function cadastrarSimplificado(event) {
 function login(event) {
   event.preventDefault();
 
-  const nome = document.querySelector('input[placeholder="Nome"]').value;
-  const senha = document.querySelector('input[placeholder="Senha"]').value;
+  const email = document.querySelector('#email').value.trim();
+  const senha = document.querySelector('#senha').value.trim();
 
-  const usuario = usuarios.find(u => u.nome === nome && u.senha === senha);
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  const usuario = usuarios.find(u => u.email === email && u.senha === senha);
 
   if (usuario) {
     alert(`Bem-vindo, ${usuario.nome}!`);
     window.location.href = "home.html";
   } else {
-    alert("Nome ou senha incorretos!");
+    alert("E-mail ou senha incorretos!");
   }
 }
 
@@ -93,14 +95,3 @@ function esqueceuSenha(event) {
     alert("E-mail não encontrado!");
   }
 }
-
-[
-  {
-    "nome": "Filipe",
-    "email": "filipe@email.com",
-    "senha": "1234",
-    "sexo": "masculino",
-    "categoria": "morador"
-  }
-]
-
