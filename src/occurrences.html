@@ -73,9 +73,15 @@
               <div class="modal-body">
                 <form>
                     <div class="mb-2">
-                        <label for="inputBairro" class="form-label">Bairro</label>
-                        <input list="bairrosList" id="inputBairro" class="form-control" placeholder="Escolha ou pesquise o bairro" required>
-                        <datalist id="bairrosList"></datalist>
+                        <input 
+                            type="text" 
+                            id="inputBairro" 
+                            class="form-control" 
+                            placeholder="Digite ou escolha o bairro"
+                            list="listaBairros"
+                            required
+                        >
+                        <datalist id="listaBairros"></datalist>
                     </div>
                     <div class="mb-2">
                         <label for="selectOcorrencia" class="form-label">Ocorrência</label>

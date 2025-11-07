@@ -1,97 +1,44 @@
-// Recupera lista de usuários do localStorage ou cria lista vazia
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-// Função para cadastrar novo usuário (cadastro completo)
-function cadastrarCompleto(event) {
-  event.preventDefault();
-
-  const nome = document.querySelector('input[placeholder="Nome"]').value.trim();
-  const email = document.querySelector('input[placeholder="E-mail"]').value.trim();
-  const senha = document.querySelector('input[placeholder="Senha"]').value.trim();
-
-  if (!nome || !email || !senha) {
-    alert("Preencha todos os campos!");
-    return;
-  }
-
-  const existe = usuarios.some(u => u.email === email);
-  if (existe) {
-    alert("Este e-mail já está cadastrado!");
-    return;
-  }
-
-  const novoUsuario = { nome, email, senha };
-  usuarios.push(novoUsuario);
-
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-  alert("Cadastro realizado com sucesso!");
-  window.location.href = "login.html";
-}
-
-// Função para cadastro simplificado
-function cadastrarSimplificado(event) {
-  event.preventDefault();
-
-  const sexo = document.querySelector("select:nth-of-type(1)").value;
-  const categoria = document.querySelector("select:nth-of-type(2)").value;
-  const senha = document.querySelector('input[placeholder="Senha"]').value.trim();
-  const confirma = document.querySelector('input[placeholder="Confirmação de senha"]').value.trim();
-
-  if (!sexo || !categoria || !senha || !confirma) {
-    alert("Preencha todos os campos!");
-    return;
-  }
-
-  if (senha !== confirma) {
-    alert("As senhas não coincidem!");
-    return;
-  }
-
-  const email = prompt("Digite seu e-mail para cadastro:");
-  const nome = prompt("Digite seu nome completo:");
-
-  if (!email || !nome) {
-    alert("Cadastro cancelado.");
-    return;
-  }
-
-  const novoUsuario = { nome, email, senha, sexo, categoria };
-  usuarios.push(novoUsuario);
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-  alert("Conta criada com sucesso!");
-  window.location.href = "login.html";
-}
+// URL base do JSON Server (onde estão seus usuários)
+const API_URL = "http://localhost:3000/usuarios";
 
 // Função de login
-function login(event) {
+async function login(event) {
   event.preventDefault();
 
   const email = document.querySelector('#email').value.trim();
   const senha = document.querySelector('#senha').value.trim();
 
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  const usuario = usuarios.find(u => u.email === email && u.senha === senha);
-
-  if (usuario) {
-    alert(`Bem-vindo, ${usuario.nome}!`);
-    window.location.href = "home.html";
-  } else {
-    alert("E-mail ou senha incorretos!");
+  if (!email || !senha) {
+    alert("Preencha todos os campos!");
+    return;
   }
-}
 
-// Função para "Esqueceu a senha"
-function esqueceuSenha(event) {
-  event.preventDefault();
+  try {
+    // Busca todos os usuários do JSON Server
+    const resp = await fetch(API_URL);
+    if (!resp.ok) throw new Error("Erro ao acessar servidor");
 
-  const email = document.querySelector('input[type="email"]').value;
-  const usuario = usuarios.find(u => u.email === email);
+    const usuarios = await resp.json();
 
-  if (usuario) {
-    alert("Um link de redefinição de senha foi enviado para o seu e-mail (simulado).");
-  } else {
-    alert("E-mail não encontrado!");
+    // Verifica se há usuário com e-mail e senha correspondentes
+    const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+    if (usuario) {
+      // Salva o usuário logado no localStorage
+      localStorage.setItem("userId", usuario.id);
+      localStorage.setItem("userName", usuario.nome);
+      localStorage.setItem("userCidade", usuario.cidade);
+      localStorage.setItem("userBairro", usuario.bairro);
+      localStorage.setItem("userUF", usuario.uf); // <-- faltava essa linha!
+
+      // Redireciona
+      window.location.href = "home.html";
+    } else {
+      alert("E-mail ou senha incorretos!");
+    }
+
+  } catch (e) {
+    console.error(e);
+    alert("Erro ao conectar ao servidor: " + e.message);
   }
 }

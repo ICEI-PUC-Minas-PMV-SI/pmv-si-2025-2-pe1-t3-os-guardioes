@@ -104,10 +104,5 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erro ao buscar CEP:", error);
       alert("Erro ao consultar o CEP. Verifique sua conexão.");
     }
-
-    // Salva nome e e-mail no localStorage para usar na próxima tela
-localStorage.setItem("nomeUsuario", document.getElementById("nome").value);
-localStorage.setItem("emailUsuario", document.getElementById("email").value);
-
   });
 });
