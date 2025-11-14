@@ -104,5 +104,37 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erro ao buscar CEP:", error);
       alert("Erro ao consultar o CEP. Verifique sua conexão.");
     }
+
+      // 🔹 Capturar o envio do formulário e salvar os dados no localStorage
+  const formCadastro = document.getElementById("formCadastroCompleto");
+
+  formCadastro.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const dados = {
+      nome: document.getElementById("nome").value,
+      email: document.getElementById("email").value,
+      tipoPessoa: document.getElementById("tipoPessoa").value,
+      cpf: document.getElementById("cpf").value,
+      cnpj: document.getElementById("cnpj").value,
+      celular: document.getElementById("celular").value,
+      idade: document.getElementById("idade").value,
+      cep: document.getElementById("cep").value,
+      rua: document.getElementById("rua").value,
+      bairro: document.getElementById("bairro").value,
+      numero: document.getElementById("numero").value,
+      complemento: document.getElementById("complemento").value,
+      cidade: document.getElementById("cidade").value,
+      uf: document.getElementById("uf").value,
+      aceitaPoliticas: document.getElementById("aceito").checked,
+      receberNovidades: document.getElementById("novidades").checked,
+      sexo: document.getElementById("sexo").value
+    };
+
+    localStorage.setItem("cadastroParcial", JSON.stringify(dados));
+
+    window.location.href = "cadastro_senha.html";
+  });
+
   });
 });

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const senha = document.getElementById("senha");
   const confirmarSenha = document.getElementById("confirmarSenha");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     if (senha.value !== confirmarSenha.value) {
@@ -11,24 +11,35 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // 🔹 Recuperar os dados salvos da tela anterior (ou cria lista vazia)
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    // 🔹 Recupera os dados salvos da tela 1
+    const dadosParciais = JSON.parse(localStorage.getItem("cadastroParcial"));
 
-    // 🔹 Aqui você poderia pegar os dados do cadastro completo
-    const nome = localStorage.getItem("nomeUsuario");
-    const email = localStorage.getItem("emailUsuario");
-
-    if (!nome || !email) {
+    if (!dadosParciais) {
       alert("Erro: dados do cadastro não encontrados.");
       return;
     }
 
-    // 🔹 Criar o usuário e salvar
-    const novoUsuario = { nome, email, senha: senha.value };
-    usuarios.push(novoUsuario);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    // 🔹 Junta tudo: primeira tela + senha
+    const usuarioCompleto = {
+      ...dadosParciais,
+      senha: senha.value
+    };
 
-    alert("Conta criada com sucesso!");
-    window.location.href = "login.html";
+    // 🔹 Faz o POST para o JSON-server /backend
+    try {
+      await fetch("http://localhost:3000/usuarios", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(usuarioCompleto)
+      });
+
+      alert("Cadastro concluído com sucesso!");
+      localStorage.removeItem("cadastroParcial");
+      window.location.href = "login.html";
+
+    } catch (erro) {
+      console.error(erro);
+      alert("Erro ao salvar o usuário no servidor.");
+    }
   });
 });
