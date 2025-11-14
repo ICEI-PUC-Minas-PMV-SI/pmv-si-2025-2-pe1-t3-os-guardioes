@@ -1,4 +1,4 @@
-// URL base do JSON Server (onde estão seus usuários)
+// URL do JSON Server
 const API_URL = "http://localhost:3000/usuarios";
 
 // Função de login
@@ -14,31 +14,32 @@ async function login(event) {
   }
 
   try {
-    // Busca todos os usuários do JSON Server
+    // Busca os usuários no JSON Server
     const resp = await fetch(API_URL);
     if (!resp.ok) throw new Error("Erro ao acessar servidor");
 
     const usuarios = await resp.json();
 
-    // Verifica se há usuário com e-mail e senha correspondentes
+    // Procura o usuário pelo email e senha
     const usuario = usuarios.find(u => u.email === email && u.senha === senha);
 
-    if (usuario) {
-      // Salva o usuário logado no localStorage
-      localStorage.setItem("userId", usuario.id);
-      localStorage.setItem("userName", usuario.nome);
-      localStorage.setItem("userCidade", usuario.cidade);
-      localStorage.setItem("userBairro", usuario.bairro);
-      localStorage.setItem("userUF", usuario.uf); // <-- faltava essa linha!
-
-      // Redireciona
-      window.location.href = "home.html";
-    } else {
+    if (!usuario) {
       alert("E-mail ou senha incorretos!");
+      return;
     }
 
-  } catch (e) {
-    console.error(e);
-    alert("Erro ao conectar ao servidor: " + e.message);
+    // Salva dados do usuário logado
+    localStorage.setItem("userId", usuario.id);
+    localStorage.setItem("userName", usuario.nome);
+    localStorage.setItem("userCidade", usuario.cidade || "");
+    localStorage.setItem("userBairro", usuario.bairro || "");
+    localStorage.setItem("userUF", usuario.uf || "");
+
+    // Redireciona
+    window.location.href = "home.html";
+
+  } catch (erro) {
+    console.error(erro);
+    alert("Erro ao conectar ao servidor.");
   }
 }

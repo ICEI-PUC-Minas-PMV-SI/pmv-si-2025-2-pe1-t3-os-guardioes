@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cep    = document.getElementById("cep");
   const numero = document.getElementById("numero");
 
-  // 🔹 Função para alternar campos conforme tipo de pessoa
+  // Função para alternar campos conforme tipo de pessoa
   function atualizarCamposPessoa() {
     if (Pessoa.value === "fisica") {
       cpf.style.display   = "inline-block";
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 🔹 Executar uma vez ao carregar a página (corrige o bug do “ficar travado”)
+  // Executar ao carregar página
   atualizarCamposPessoa();
 
-  // 🔹 Atualizar quando o usuário mudar o tipo
+  // Atualiza ao mudar o tipo
   Pessoa.addEventListener("change", atualizarCamposPessoa);
 
-  // 🔹 Aplicar máscaras
+  // Máscaras
   function aplicarMascara(input, tipo) {
     let valor = input.value.replace(/\D/g, "");
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (tipo === "celular") {
       valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
-      valor = valor.replace(/(\d{5})(\d{4})$/, "$1-$2");
+      valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
     }
 
     if (tipo === "cep") {
@@ -71,17 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("celular").addEventListener("input", (e) => aplicarMascara(e.target, "celular"));
   cep.addEventListener("input", (e) => aplicarMascara(e.target, "cep"));
 
-  // 🔹 Permitir apenas números em idade e número
+  // Apenas números em idade e número
   ["idade", "numero"].forEach(id => {
     document.getElementById(id).addEventListener("input", (e) => {
       e.target.value = e.target.value.replace(/\D/g, "");
     });
   });
 
-  // 🔹 Consultar endereço pelo CEP (ViaCEP)
+  // Consulta CEP (ViaCEP)
   cep.addEventListener("blur", async () => {
     const cepLimpo = cep.value.replace(/\D/g, "");
-    if (cepLimpo.length !== 8) return; // só consulta se tiver 8 dígitos
+    if (cepLimpo.length !== 8) return;
 
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
@@ -97,15 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("cidade").value = data.localidade || "";
       document.getElementById("uf").value = data.uf || "";
 
-      // 🔸 Focar automaticamente no campo número
       numero.focus();
 
     } catch (error) {
       console.error("Erro ao buscar CEP:", error);
       alert("Erro ao consultar o CEP. Verifique sua conexão.");
     }
+  });
 
-      // 🔹 Capturar o envio do formulário e salvar os dados no localStorage
+  // Submit do formulário
   const formCadastro = document.getElementById("formCadastroCompleto");
 
   formCadastro.addEventListener("submit", (e) => {
@@ -136,5 +136,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "cadastro_senha.html";
   });
 
-  });
 });
