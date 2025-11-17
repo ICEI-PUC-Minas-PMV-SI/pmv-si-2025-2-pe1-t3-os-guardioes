@@ -24,21 +24,60 @@ Nesta seção o grupo deverá documentar os testes de software que verificam a c
 
 Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
 
-
-**Caso de Teste** | **CT01 - Criar conta parte 1**
+**Caso de Teste** | **CT01 – Cadastro de Usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Acesse o endereço www.teste.com.br <br> 2) Clique em criar conta <br> 2) Preencha todos os campos do formulário <br> 3) Clique no botão "Continuar".
+**Procedimento**  | 1) Clique em “Cadastrar” <br> 2) Preencha nome, email, senha e tipo de usuário <br> 3) Clique no botão “Criar conta” <br>
 **Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Resultado esperado** | Usuário cadastrado com sucesso
+**Dados de entrada** | Nome: João Silva, Email: joao@email.com, Senha: 123
 **Resultado obtido** | Sucesso
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - Login  de usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Criar conta" <br> 
-**Requisitos associados** | RF-001
-**Resultado esperado** | Usuário cadastrado
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Procedimento**  | 1) Clique em “Entrar” <br> 2) Preencha email e senha <br> 3) Clique no botão “Entrar” <br>
+**Requisitos associados** | RF-002
+**Resultado esperado** | Usuário autenticado e redirecionado para a página inicial
+**Dados de entrada** | Email: joao@email.com, Senha: 123
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT03 - Cadastrar ocorrência**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acesse a seção “Ocorrências” <br> 3) Clique em “Registrar Ocorrência” <br> 4) Preencha os campos (bairro, tipo, data, imagem) <br> 5) Clique em “Salvar” <br>
+**Requisitos associados** | RF-003
+**Resultado esperado** | Ocorrência cadastrada com sucesso
+**Dados de entrada** | Barro: Jardim Belvedere, Data: 17/11/2025, Hora: 11:46,  Tipo: Assalto
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT04 - Reportar Denúncia**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acesse a seção “Ocorrências” <br> 3) Clique nos 3 pontos no item que desejar <br> 4) Clique em "Denunciar" <br> 5) Informe a descrição (motivo) <br> 6) Clique em “Enviar” <br>
+**Requisitos associados** | RF-004
+**Resultado esperado** | Denúncia registrada com sucesso
+**Dados de entrada** | Descrição: A ocorrência era falsa, e esse fato não aconteceu.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT05 - Confirmar ocorrência**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acesse a seção “Ocorrências” <br> 3) Clique nos 3 pontos no item que desejar <br> 4) Clique em "Confirmar" <br>
+**Requisitos associados** | RF-005
+**Resultado esperado** | Ocorrência confirmada
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT06 - Cadastrar Atividade Suspeita**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acessar “Gerenciamento de informações criticas” <br> 3)Clicar em “Novo Registro” <br> 4) Preencher tipo (veículo/pessoa), descrição, local e anexar foto <br> 5) PClicar em “Salvar” <br>
+**Requisitos associados** | RF-006
+**Resultado esperado** | Registro de atividade suspeita salvo
+**Dados de entrada** | Tipo: Veículo suspeito, Descrição: Carro rondando a rua repetidamente, Foto: carro_suspeito.png
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT07 - Analisar Ocorrências**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acessar “Análise de Ocorrências” <br> 3) Selecionar uma ocorrência <br> 4) Clicar em “Excluir” <br>
+**Requisitos associados** | RF-007
+**Resultado esperado** | Ocorrência excluída com sucesso
+**Dados de entrada** | Ocorrência ID 215
 **Resultado obtido** | Sucesso
 
 ## Registro dos Testes de Software
@@ -143,6 +182,7 @@ Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos
 Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
 
 Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
+
 
 
 
