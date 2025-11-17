@@ -37,6 +37,27 @@
       "cidade": "Volta Redonda",
       "uf": "RJ",
       "senha": "123456"
+    },
+    {
+      "id": "2125",
+      "nome": "Eric Hausman",
+      "email": "eric.exemplo@gmail.com",
+      "tipoPessoa": "fisica",
+      "cpf": "226.981.002-20",
+      "cnpj": "",
+      "celular": "(24) 99202-6451",
+      "idade": "24",
+      "cep": "27258-485",
+      "rua": "Rua F",
+      "bairro": "Jardim Belvedere",
+      "numero": "120",
+      "complemento": "Mata Atlântica",
+      "cidade": "Volta Redonda",
+      "uf": "RJ",
+      "aceitaPoliticas": true,
+      "receberNovidades": true,
+      "sexo": "masculino",
+      "senha": "123456"
     }
   ],
   "occurrences": [
@@ -57,7 +78,8 @@
       "descricao": "fdff",
       "dataHora": "2025-11-07T16:35:00",
       "image": "",
-      "userId": 1
+      "userId": 1,
+      "status": "reportada"
     },
     {
       "id": "f2db",
@@ -126,6 +148,13 @@
       "descricaoReporte": "Não foi verdade",
       "userId": 1,
       "dataHoraReporte": "2025-11-07T19:36:12.627Z"
+    },
+    {
+      "id": "120f",
+      "ocorrenciaId": "bbf9",
+      "descricaoReporte": "Essa denuncia nem aconteceu, ta todo mundo doidao",
+      "userId": 1,
+      "dataHoraReporte": "2025-11-17T14:11:39.011Z"
     }
   ],
   "informacoes_criticas": [

@@ -1,14 +1,14 @@
 const API_URL = "http://localhost:3000/informacoes_criticas";
 
-const cardsContainer = document.getElementById("card-grid");
-const btnSalvarInfo = document.getElementById("btnSalvarInfo");
-const selectTipo = document.getElementById("selectTipo");
+const cardsContainer    = document.getElementById("card-grid");
+const btnSalvarInfo     = document.getElementById("btnSalvarInfo");
+const selectTipo        = document.getElementById("selectTipo");
 const textareaDescricao = document.getElementById("textareaDescricao");
-const inputBairro = document.getElementById("inputBairro");
-const inputDate = document.getElementById("inputDate");
-const inputTime = document.getElementById("inputTime");
-const imgUploadInfo = document.getElementById('imgUploadInfo');
-const previewInfo = document.getElementById('previewInfo');
+const inputBairro       = document.getElementById("inputBairro");
+const inputDate         = document.getElementById("inputDate");
+const inputTime         = document.getElementById("inputTime");
+const imgUploadInfo     = document.getElementById('imgUploadInfo');
+const previewInfo       = document.getElementById('previewInfo');
 
 let listaInfosCriticas = [];
 
@@ -101,11 +101,8 @@ btnSalvarInfo.addEventListener("click", async (e) => {
   const novaInfo = { tipo, descricao, bairro, dataHora, image: imageBase64, userId: 1 };
 
   try {
-    const resp = await fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(novaInfo)
-    });
+    const resp = await fetch(API_URL, {method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(novaInfo)});
+    
     if (!resp.ok) throw new Error("Erro ao salvar informação crítica");
 
     // Fecha modal e limpa campos

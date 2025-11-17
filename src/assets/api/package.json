@@ -2,8 +2,14 @@
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
   },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
   "scripts": {
-    "api": "json-server --watch db.json --port 3000"
+    "api": "json-server --watch db.json --port 3000",
+    "site": "live-server ../../ --port=8000",
+    "start": "concurrently \"npm run api\" \"npm run site\""
   }
 }
+
 

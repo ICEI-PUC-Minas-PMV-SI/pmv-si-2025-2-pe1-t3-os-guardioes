@@ -89,6 +89,6 @@ body {
 }
 
 .login-container .btn-entrar:hover {
-    background-color: #a875d5;
-    transform: scale(1.05); /* cresce um pouquinho ao passar o mouse */
+  background-color: #a875d5;
+  transform: scale(1.05); /* cresce um pouquinho ao passar o mouse */
 }
