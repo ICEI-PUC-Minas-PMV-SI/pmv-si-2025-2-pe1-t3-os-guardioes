@@ -32,11 +32,12 @@
       "cep": "27258-485",
       "rua": "Rua F",
       "bairro": "Jardim Belvedere",
-      "numero": "120",
+      "numero": "20",
       "complemento": "",
       "cidade": "Volta Redonda",
       "uf": "RJ",
-      "senha": "123456"
+      "senha": "123456",
+      "receberNovidades": false
     },
     {
       "id": "2125",
