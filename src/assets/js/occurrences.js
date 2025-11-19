@@ -299,7 +299,7 @@ async function registrarBairroSeNovo(nomeBairro) {
       datalistBairros.appendChild(opt);
     }
   } catch (e) {
-    console.error("Erro ao registrar bairro:", e);
+    console.error("Erro ao registrar bairro.", e);
   }
 }
 
