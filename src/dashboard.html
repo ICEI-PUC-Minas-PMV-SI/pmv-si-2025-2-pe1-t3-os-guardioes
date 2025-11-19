@@ -11,7 +11,6 @@
 
   <!-- Menu -->
   <nav class="navbar">
-      <!-- Botão de voltar -->
       <button class="back-btn" onclick="history.back()">
           <i class="fa-solid fa-arrow-left"></i>
       </button>
@@ -21,7 +20,6 @@
           <span>Os Guardiões</span>
       </div>
 
-      <!-- botão/ícone do menu -->
       <div class="dropdown-user" id="menuBtn">
           <i class="fa-solid fa-bars"></i>
       </div>
@@ -38,63 +36,25 @@
     <header>Ranking de Segurança</header>
 
     <div class="dashboard">
-      <table>
-      <tr>
-        <th>Posição</th>
-        <th>Bairro</th>
-        <th>Nível de Segurança</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Jardim das Flores</td>
-        <td>Alta</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Vila Nova</td>
-        <td>Média</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Centro</td>
-        <td>Baixa</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>São Pedro</td>
-        <td>Média</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Morumbi</td>
-        <td>Alta</td>
-      </tr>
-    </table>
+      <table id="ranking-table">
+        <tr>
+          <th>Posição</th>
+          <th>Bairro</th>
+          <th>Nível de Segurança</th>
+        </tr>
+      </table>
 
-    <div class="info-boxes">
-      <div class="info-box">
-        Bairro mais Seguro <span>Jardim das Flores</span>
+      <div class="info-boxes">
+        <div class="info-box">
+          Bairro mais Seguro <span id="mais-seguro">...</span>
+        </div>
+        <div class="info-box">
+          Bairro mais Perigoso <span id="mais-perigoso">...</span>
+        </div>
       </div>
-      <div class="info-box">
-        Bairro mais Perigoso <span>Centro</span>
-      </div>
-    </div>
 
-    <div class="chart">
-      <div class="bar bar-5">5</div>
-      <div class="bar bar-12">12</div>
-      <div class="bar bar-45">45</div>
-      <div class="bar bar-18">18</div>
-      <div class="bar bar-8">8</div>
-    </div>
-
-    <div class="chart-labels">
-      <div class="bar-label">Jardim F.</div>
-      <div class="bar-label">Vila N.</div>
-      <div class="bar-label">Centro</div>
-      <div class="bar-label">São Pedro</div>
-      <div class="bar-label">Morumbi</div>
-    </div>
+      <div class="chart" id="chart"></div>
+      <div class="chart-labels" id="chart-labels"></div>
     </div>
   </div>
 
@@ -107,20 +67,76 @@
         dropdownMenu.classList.toggle('show');
     });
 
-    // se clicar fora do menu, fecha
     window.addEventListener('click', (event) => {
         if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
         dropdownMenu.classList.remove('show');
         }
     });
-    </script>
+  </script>
 
   <script>
     const backBtn = document.querySelector('.back-btn');
-    
     if (window.location.pathname.endsWith('index.html')) {
         backBtn.style.display = 'none';
     }
+  </script>
+
+  <!-- SCRIPT DINÂMICO PARA MONTAR O RANKING -->
+  <script>
+  async function carregarRanking() {
+    const response = await fetch("http://localhost:3000/occurrences");
+    const ocorrencias = await response.json();
+
+    const tabela = document.getElementById("ranking-table");
+    const chart = document.getElementById("chart");
+    const chartLabels = document.getElementById("chart-labels");
+
+    const spanMaisSeguro = document.getElementById("mais-seguro");
+    const spanMaisPerigoso = document.getElementById("mais-perigoso");
+
+    const contagem = {};
+
+    ocorrencias.forEach(o => {
+      if (!o.bairro) return;
+      contagem[o.bairro] = (contagem[o.bairro] || 0) + 1;
+    });
+
+    const ranking = Object.entries(contagem)
+      .map(([bairro, total]) => ({ bairro, total }))
+      .sort((a, b) => b.total - a.total);
+
+    function nivel(total) {
+      if (total === 0) return "Alta";
+      if (total <= 1) return "Média";
+      return "Baixa";
+    }
+
+    // LIMPA
+    chart.innerHTML = "";
+    chartLabels.innerHTML = "";
+
+    // PREENCHER TABELA
+    ranking.forEach((item, index) => {
+      tabela.innerHTML += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${item.bairro}</td>
+          <td>${nivel(item.total)}</td>
+        </tr>
+      `;
+
+      chart.innerHTML += `<div class="bar" style="height:${item.total * 10}px">${item.total}</div>`;
+      chartLabels.innerHTML += `<div class="bar-label">${item.bairro}</div>`;
+    });
+
+    // MAIS PERIGOSO = maior número de ocorrências
+    spanMaisPerigoso.innerText = ranking[0]?.bairro || "-";
+
+    // MAIS SEGURO = menor número de ocorrências
+    spanMaisSeguro.innerText = ranking[ranking.length - 1]?.bairro || "-";
+  }
+
+  carregarRanking();
   </script>
 
 </body>
