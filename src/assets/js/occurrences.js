@@ -1,13 +1,9 @@
-// ============================
 // CONFIGURAÇÕES GERAIS
-// ============================
-const API_URL        = "http://localhost:3000/occurrences";
-const API_BAIRROS    = "http://localhost:3000/bairros";
-const API_REPORTES_URL = "http://localhost:3000/ocorrencias_descricao";
+const API_URL           = "http://localhost:3000/occurrences";
+const API_BAIRROS       = "http://localhost:3000/bairros";
+const API_REPORTES_URL  = "http://localhost:3000/ocorrencias_descricao";
 
-// ============================
 // ELEMENTOS DO DOM
-// ============================
 const btnSalvar         = document.getElementById("btnSalvarEvento");
 const inputBairro       = document.getElementById("inputBairro");
 const selectTipo        = document.getElementById("selectOcorrencia");
@@ -24,15 +20,11 @@ const btnBusca          = document.querySelector(".btn-pesquisa");
 const ordenarAZ         = document.getElementById("ordenar-alfabetica");
 const ordenarRecentes   = document.getElementById("ordenar-proximos");
 
-// ============================
 // VARIÁVEIS GLOBAIS
-// ============================
 let listaOcorrencias = [];
 let ocorrenciaSelecionadaId = null;
 
-// ============================
 // FUNÇÃO PRINCIPAL - CARREGAR OCORRÊNCIAS
-// ============================
 async function carregarOcorrencias() {
   cardsContainer.innerHTML = "<p>Carregando...</p>";
   try {
@@ -46,9 +38,7 @@ async function carregarOcorrencias() {
   }
 }
 
-// ============================
 // MONTAR OS CARDS NA TELA
-// ============================
 function renderCards(lista) {
   if (!lista || lista.length === 0) {
     cardsContainer.innerHTML = "<p>Nenhuma ocorrência registrada.</p>";
@@ -82,17 +72,13 @@ function renderCards(lista) {
   });
 }
 
-// ============================
 // FORMATAR DATA
-// ============================
 function formatarData(dataIso) {
   const dt = new Date(dataIso);
   return dt.toLocaleDateString("pt-BR") + " " + dt.toLocaleTimeString("pt-BR", { hour: "2-digit", minute:"2-digit" });
 }
 
-// ============================
 // SALVAR NOVA OCORRÊNCIA
-// ============================
 btnSalvar.addEventListener("click", async () => {
   const bairro         = inputBairro.value.trim();
   const tipoOcorrencia = selectTipo.value;
@@ -142,9 +128,7 @@ btnSalvar.addEventListener("click", async () => {
   }
 });
 
-// ============================
 // CONVERTER ARQUIVO PARA BASE64
-// ============================
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -154,9 +138,7 @@ function fileToBase64(file) {
   });
 }
 
-// ============================
 // BUSCA E ORDENAÇÃO
-// ============================
 function filtrarPorBairro() {
   const termo = inputBusca.value.toLowerCase().trim();
   const filtradas = listaOcorrencias.filter(o => o.bairro.toLowerCase().includes(termo));
@@ -176,9 +158,8 @@ ordenarRecentes.addEventListener("click", () => {
 btnBusca.addEventListener("click", filtrarPorBairro);
 inputBusca.addEventListener("keyup", e => { if (e.key === "Enter") filtrarPorBairro(); });
 
-// ============================
 // MODAIS E STATUS
-// ============================
+
 function abrirMenuOcorrencia(id) {
   ocorrenciaSelecionadaId = id;
   const modal = new bootstrap.Modal(document.getElementById("modalOpcao"));
@@ -252,9 +233,7 @@ btnSalvarReporte.addEventListener("click", async () => {
   }
 });
 
-// ============================
 // GERENCIAMENTO DE BAIRROS
-// ============================
 
 // Carrega sugestões de bairros da cidade/UF do usuário
 async function carregarBairrosSugeridos() {
@@ -324,9 +303,7 @@ async function registrarBairroSeNovo(nomeBairro) {
   }
 }
 
-// ============================
 // INICIALIZAÇÃO
-// ============================
 window.addEventListener("DOMContentLoaded", () => {
   carregarOcorrencias();
   carregarBairrosSugeridos();
