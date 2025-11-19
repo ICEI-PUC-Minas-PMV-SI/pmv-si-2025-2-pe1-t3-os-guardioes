@@ -80,6 +80,14 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Ocorrência ID 215
 **Resultado obtido** | Sucesso
 
+**Caso de Teste** | **CT08 - Ranking de Bairros (Ocorrências)**
+ :--------------: | ------------
+**Procedimento**  | 1) Realize login <br> 2) Acessar “Ranking de Bairros” <br> 3) Visualizar ranking <br> 
+**Requisitos associados** | RF-008
+**Resultado esperado** | O sistema deve exibir corretamente o ranking dos bairros baseado nas ocorrências armazenadas, ordenando conforme os níveis de segurança. 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
@@ -125,14 +133,16 @@ Apresente os cenários de testes utilizados na realização dos testes de usabil
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
-
-
+| 1             | Você é um novo morador e deseja criar uma conta no aplicativo Os Guardiões. Realize seu cadastro com nome, email e senha. |
+| 2             | Você acabou de se mudar para um bairro e deseja registrar uma ocorrência de segurança. Registre uma 
+ocorrência informando tipo, bairro, data e imagem. |
+| 3             | Você encontrou uma ocorrência suspeita no aplicativo e deseja denunciá-la. Acesse a ocorrência e envie 
+uma denúncia informando o motivo. |
+| 4             | Você deseja consultar quais bairros são mais seguros e mais perigosos na sua cidade. Acesse o Ranking de Bairros e visualize o nível de segurança. |
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você é um novo morador e deseja criar uma conta no aplicativo Os Guardiões. Realize seu cadastro com nome, email e senha.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
@@ -144,11 +154,12 @@ Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site u
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
 
 
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
-    Não tive dificuldades e acho que ficou bem intuitivo.
+    Comentários dos usuários: "O cadastro é simples e direto." 
+    "Achei tudo fácil de entender."
 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Você acabou de se mudar para um bairro e deseja registrar uma ocorrência de segurança. Registre uma 
+ocorrência informando tipo, bairro, data e imagem. 
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
@@ -160,20 +171,50 @@ Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,0
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
 
 
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+    Comentários dos usuários: "A imagem demora um pouquinho para anexar."
+
+Cenário 3: Você encontrou uma ocorrência suspeita no aplicativo e deseja denunciá-la. Acesse a ocorrência e envie 
+uma denúncia informando o motivo.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 22.54 segundos                          |
+| 2       | SIM             | 5                    | 18.64 segundos                          |
+| 3       | SIM             | 4                    | 25.39 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4.33                | 22.04 segundos                       |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 7.90 segundos |
+
+
+    Comentários dos usuários: “Achei fácil denunciar.”
+
+Cenário 4: Você deseja consultar quais bairros são mais seguros e mais perigosos na sua cidade. Acesse o Ranking de Bairros e visualize o nível de segurança.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 29.14 segundos                          |
+| 2       | SIM             | 5                    | 34.88 segundos                          |
+| 3       | SIM             | 5                    | 27.03 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4.33                | 30.35 segundos                       |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 10.44 segundos |
+
+
+    Comentários dos usuários: “Gostei do gráfico, bem claro.” 
+    “Fácil de entender o bairro mais seguro e o mais perigoso.”
 
 ## Avaliação dos Testes de Usabilidade
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
+Os resultados demonstram que a aplicação apresenta excelente taxa de sucesso, visto que todos os usuários conseguiram concluir todos os cenários com êxito.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+A satisfação subjetiva foi consistentemente alta, variando entre 4 (Bom) e 5 (Ótimo) em todos os testes, indicando boa aceitação e facilidade de uso da plataforma.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
+Houve diferença entre o tempo médio dos usuários e o tempo do especialista, o que é esperado, já que o desenvolvedor possui conhecimento prévio da interface e da navegação.
 
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
-
+Os comentários indicam pontos de melhoria:
+  maior visibilidade de botões (como o menu de opções nas ocorrências);
+  mais opções de filtros e autocomplete;
+  aprimoramento na fluidez do upload de imagens.
 
 
 
