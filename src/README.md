@@ -31,7 +31,7 @@ npm install
 Execute o comando dentro da pasta api (C:\source\assets\api):
 
 ```bash
-npm run api
+npm run start
 ```
 
 Isso iniciará:
