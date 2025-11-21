@@ -50,39 +50,39 @@
         </div>
         <div class="modal-body">
             <form id="formNovaInfo">
-            <div class="mb-2">
-                <label class="form-label">Tipo</label>
-                <select id="selectTipo" class="form-control" required>
-                <option value="" disabled selected>Selecione o tipo</option>
-                <option value="Pessoa">Pessoa</option>
-                <option value="Veículo">Veículo</option>
-                <option value="Objeto">Objeto</option>
-                <option value="Outro">Outro</option>
-                </select>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Descrição</label>
-                <textarea id="textareaDescricao" class="form-control" rows="3" required></textarea>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Bairro</label>
-                <input id="inputBairro" type="text" class="form-control" required/>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Data e Hora</label>
-                <input id="inputDate" type="date" class="form-control mb-2" required/>
-                <input id="inputTime" type="time" class="form-control" required/>
-            </div>
+                <div class="mb-2">
+                    <label class="form-label">Bairro</label>
+                    <input id="inputBairro" type="text" class="form-control" required/>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Tipo</label>
+                    <select id="selectTipo" class="form-control" required>
+                    <option value="" disabled selected>Selecione o tipo</option>
+                    <option value="Pessoa">Pessoa</option>
+                    <option value="Veículo">Veículo</option>
+                    <option value="Objeto">Objeto</option>
+                    <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Descrição</label>
+                    <textarea id="textareaDescricao" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Data e Hora</label>
+                    <input id="inputDate" type="date" class="form-control mb-2" required/>
+                    <input id="inputTime" type="time" class="form-control" required/>
+                </div>
 
-            <!-- Upload de imagem -->
-            <div class="mb-3 upload-box">
-                <label for="imgUploadInfo" class="form-label">
-                <i class="fa-solid fa-camera"></i>
-                <span>*Anexe uma foto (opcional)</span>
-                </label>
-                <input type="file" id="imgUploadInfo" accept="image/*" hidden>
-                <div id="previewInfo" class="preview-area">Clique ou arraste a imagem aqui</div>
-            </div>
+                <!-- Upload de imagem -->
+                <div class="mb-3 upload-box">
+                    <label for="imgUploadInfo" class="form-label">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>*Anexe uma foto (opcional)</span>
+                    </label>
+                    <input type="file" id="imgUploadInfo" accept="image/*" hidden>
+                    <div id="previewInfo" class="preview-area">Clique ou arraste a imagem aqui</div>
+                </div>
             </form>
         </div>
         <div class="modal-footer">

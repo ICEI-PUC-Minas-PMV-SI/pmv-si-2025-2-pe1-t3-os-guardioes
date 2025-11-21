@@ -308,3 +308,17 @@ window.addEventListener("DOMContentLoaded", () => {
   carregarOcorrencias();
   carregarBairrosSugeridos();
 });
+
+// Preencher data e hora atual ao abrir o modal
+document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', () => {
+  const agora = new Date();
+
+  // Formata a data no padrão YYYY-MM-DD
+  const dataFormatada = agora.toISOString().slice(0, 10);
+
+  // Formata a hora no padrão HH:MM
+  const horaFormatada = agora.toTimeString().slice(0, 5);
+
+  inputDate.value = dataFormatada;
+  inputTime.value = horaFormatada;
+});

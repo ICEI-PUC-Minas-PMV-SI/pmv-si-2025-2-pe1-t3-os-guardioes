@@ -119,3 +119,12 @@ btnSalvarInfo.addEventListener("click", async (e) => {
 
 // Inicialização
 carregarInfosCriticas();
+document.getElementById('modalNovaInfo').addEventListener('shown.bs.modal', () => {
+  const agora = new Date();
+
+  const dataFormatada = agora.toISOString().slice(0, 10); // YYYY-MM-DD
+  const horaFormatada = agora.toTimeString().slice(0, 5); // HH:MM
+
+  inputDate.value = dataFormatada;
+  inputTime.value = horaFormatada;
+});
